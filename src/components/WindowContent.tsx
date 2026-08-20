@@ -38,7 +38,7 @@ export function WindowContent({ icon }: WindowContentProps) {
         <div className="wc-grid">
           {[0, 1, 2].map((i) => (
             <div className="wc-grid-tile" key={i}>
-              {icon.glyph}
+              <span className="wc-grid-tile-mark">{icon.glyph}</span>
             </div>
           ))}
         </div>

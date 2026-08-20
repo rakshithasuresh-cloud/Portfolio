@@ -46,11 +46,9 @@ export function useDrag({ onMove, onStart, onEnd, onClick, threshold = 4 }: UseD
     (e: React.PointerEvent) => {
       if (!dragging.current) return;
       dragging.current = false;
-      if (moved.current) {
-        onEnd?.();
-      } else {
-        onClick?.();
-      }
+      const wasClick = !moved.current;
+      onEnd?.();
+      if (wasClick) onClick?.();
       e.stopPropagation();
     },
     [onEnd, onClick],

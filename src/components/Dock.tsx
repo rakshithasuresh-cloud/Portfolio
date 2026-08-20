@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import type { DockAppData, DockAppKind } from '../types';
 import './Dock.css';
 
@@ -61,33 +61,7 @@ interface DockProps {
 }
 
 export function Dock({ apps, onLaunch }: DockProps) {
-  const dockRef = useRef<HTMLDivElement>(null);
-  const itemRefs = useRef<Record<string, HTMLButtonElement | null>>({});
   const [bouncing, setBouncing] = useState<string | null>(null);
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    const mouseX = e.clientX;
-    for (const app of apps) {
-      const el = itemRefs.current[app.id];
-      if (!el) continue;
-      const rect = el.getBoundingClientRect();
-      const center = rect.left + rect.width / 2;
-      const distance = Math.abs(mouseX - center);
-      const maxDistance = 110;
-      const maxScale = 1.6;
-      let scale = 1;
-      if (distance < maxDistance) {
-        scale = 1 + (maxScale - 1) * Math.cos((distance / maxDistance) * (Math.PI / 2));
-      }
-      el.style.setProperty('--scale', scale.toFixed(3));
-    }
-  };
-
-  const handleMouseLeave = () => {
-    for (const app of apps) {
-      itemRefs.current[app.id]?.style.setProperty('--scale', '1');
-    }
-  };
 
   const handleClick = (app: DockAppData) => {
     setBouncing(app.id);
@@ -97,12 +71,7 @@ export function Dock({ apps, onLaunch }: DockProps) {
 
   return (
     <div className="dock-wrap">
-      <div
-        className="dock"
-        ref={dockRef}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-      >
+      <div className="dock">
         {apps.map((app) => {
           const isTrash = app.kind === 'trash';
           const style = TILE_STYLE[app.kind];
@@ -111,9 +80,6 @@ export function Dock({ apps, onLaunch }: DockProps) {
               {isTrash && <div className="dock-divider" />}
               <button
                 type="button"
-                ref={(el) => {
-                  itemRefs.current[app.id] = el;
-                }}
                 className={`dock-item${bouncing === app.id ? ' is-bouncing' : ''}`}
                 onClick={() => handleClick(app)}
                 aria-label={app.label}

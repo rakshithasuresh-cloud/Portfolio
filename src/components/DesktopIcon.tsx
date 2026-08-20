@@ -55,7 +55,7 @@ export function DesktopIcon({ data, containerRef, onOpen }: DesktopIconProps) {
       aria-label={`Open ${data.label}`}
     >
       <span className="desktop-icon-tile">
-        <span className="desktop-icon-glyph">{data.glyph}</span>
+        <span className="desktop-icon-mark">{data.glyph}</span>
       </span>
       <span className="desktop-icon-label">{data.label}</span>
     </button>
