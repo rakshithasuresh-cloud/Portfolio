@@ -75,7 +75,7 @@ function App() {
       const win: WindowState = {
         id: `${key}-${Date.now()}`,
         iconId: key,
-        title: app.label,
+        title: app.kind === 'error' ? 'Adobe Error' : app.label,
         ...rect,
         zIndex: nextZ(),
         minimized: false,
@@ -148,6 +148,7 @@ function App() {
           key={win.id}
           win={win}
           isClosing={closingIds.has(win.id)}
+          bare={win.app?.kind === 'error'}
           onClose={closeWindow}
           onMinimize={minimizeWindow}
           onToggleZoom={toggleZoom}

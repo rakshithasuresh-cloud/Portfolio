@@ -1,6 +1,6 @@
 export type IconKind = 'music' | 'video' | 'document' | 'product' | 'collab';
 
-export type IconShape = 'square' | 'portrait' | 'landscape';
+export type IconShape = 'square' | 'portrait' | 'landscape' | 'widget';
 
 export interface WindowContentData {
   eyebrow: string;
@@ -19,6 +19,8 @@ export interface DesktopIconData {
   glyph: string;
   accent: string;
   accent2: string;
+  /** When set, this real image fills the tile instead of the gradient + glyph treatment. */
+  image?: string;
   x: number;
   y: number;
   content: WindowContentData;

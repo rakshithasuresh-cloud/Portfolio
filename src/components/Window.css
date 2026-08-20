@@ -29,6 +29,15 @@
   animation: window-out 0.16s ease both;
 }
 
+/* system-alert style: dark throughout, no light glass showing anywhere,
+   and free to be more compact than a regular content window */
+.mac-window-bare {
+  background: #1c1c1e;
+  border-color: rgba(255, 255, 255, 0.12);
+  min-width: 300px;
+  min-height: 150px;
+}
+
 @keyframes window-out {
   to {
     opacity: 0;
@@ -102,10 +111,26 @@
   pointer-events: none;
 }
 
+/* dark alert header — a shade apart from the body, no traffic lights */
+.mac-window-titlebar-bare {
+  height: 34px;
+  background: #2b2b2e;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  justify-content: center;
+}
+
+.mac-window-title-bare {
+  color: rgba(255, 255, 255, 0.92);
+}
+
 .mac-window-body {
   flex: 1 1 auto;
   overflow-y: auto;
   background: var(--paper);
+}
+
+.mac-window-bare .mac-window-body {
+  background: transparent;
 }
 
 .mac-window-resize {

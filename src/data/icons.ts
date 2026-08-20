@@ -1,4 +1,5 @@
 import type { DesktopIconData } from '../types';
+import discoImg from '../assets/desktop/disco.jpg';
 
 export const desktopIcons: DesktopIconData[] = [
   {
@@ -140,23 +141,23 @@ export const desktopIcons: DesktopIconData[] = [
     },
   },
   {
-    id: 'merch',
-    label: 'Merch',
+    id: 'disco',
+    label: 'Disco',
     kind: 'product',
-    shape: 'landscape',
-    glyph: '⛆',
-    accent: '#5c5c5c',
-    accent2: '#2b2b2b',
-    x: 54,
-    y: 61,
+    shape: 'widget',
+    glyph: '♫',
+    accent: '#e85fa8',
+    accent2: '#9b2f6d',
+    image: discoImg,
+    x: 55,
+    y: 63,
     content: {
-      eyebrow: 'Merchandise · Drop',
-      subtitle: 'Add drop name and date here.',
+      eyebrow: 'Single · Cover Art',
+      subtitle: 'Add a release date or credit line here.',
       body: [
-        'Placeholder description of the merch drop — garments, print technique, and lookbook direction.',
+        'Placeholder write-up for “Disco Occassionally.” Swap this copy for the real story behind the release — direction, concept, and your role on it.',
       ],
-      showImageGrid: true,
-      linkLabel: 'Shop the drop',
+      linkLabel: 'Listen to the track',
     },
   },
   {

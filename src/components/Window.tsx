@@ -7,6 +7,10 @@ interface WindowProps {
   win: WindowState;
   children: ReactNode;
   isClosing?: boolean;
+  /** No traffic lights, no light title bar, no resize — just a dark header
+   * with a centered title. Used for system-alert-style dialogs that should
+   * only be dismissed through their own in-content button. */
+  bare?: boolean;
   onClose: (id: string) => void;
   onMinimize: (id: string) => void;
   onToggleZoom: (id: string) => void;
@@ -19,6 +23,7 @@ export function Window({
   win,
   children,
   isClosing,
+  bare,
   onClose,
   onMinimize,
   onToggleZoom,
@@ -62,65 +67,76 @@ export function Window({
 
   return (
     <section
-      className={`mac-window${isClosing ? ' is-closing' : ''}`}
+      className={`mac-window${isClosing ? ' is-closing' : ''}${bare ? ' mac-window-bare' : ''}`}
       style={style}
       onPointerDown={() => onFocus(win.id)}
       role="dialog"
       aria-label={win.title}
     >
-      <header
-        className="mac-window-titlebar"
-        onPointerDown={(e) => {
-          if ((e.target as HTMLElement).closest('.mac-traffic-btn')) return;
-          dragTitle.onPointerDown(e);
-        }}
-        onPointerMove={dragTitle.onPointerMove}
-        onPointerUp={dragTitle.onPointerUp}
-        onDoubleClick={() => onToggleZoom(win.id)}
-      >
-        <div className="mac-window-traffic">
-          <button
-            type="button"
-            className="mac-traffic-btn close"
-            onClick={() => onClose(win.id)}
-            aria-label="Close window"
-          >
-            <svg viewBox="0 0 8 8" width="7" height="7">
-              <path d="M1.3 1.3L6.7 6.7M6.7 1.3L1.3 6.7" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-            </svg>
-          </button>
-          <button
-            type="button"
-            className="mac-traffic-btn minimize"
-            onClick={() => onMinimize(win.id)}
-            aria-label="Minimize window"
-          >
-            <svg viewBox="0 0 8 8" width="7" height="7">
-              <path d="M1.2 4H6.8" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-            </svg>
-          </button>
-          <button
-            type="button"
-            className="mac-traffic-btn zoom"
-            onClick={() => onToggleZoom(win.id)}
-            aria-label="Zoom window"
-          >
-            <svg viewBox="0 0 8 8" width="7" height="7">
-              <path
-                d="M1.3 5.1V6.7H2.9M6.7 2.9V1.3H5.1"
-                stroke="currentColor"
-                strokeWidth="1.2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
-              />
-            </svg>
-          </button>
-        </div>
-        <span className="mac-window-title">{win.title}</span>
-      </header>
+      {bare ? (
+        <header
+          className="mac-window-titlebar mac-window-titlebar-bare"
+          onPointerDown={dragTitle.onPointerDown}
+          onPointerMove={dragTitle.onPointerMove}
+          onPointerUp={dragTitle.onPointerUp}
+        >
+          <span className="mac-window-title mac-window-title-bare">{win.title}</span>
+        </header>
+      ) : (
+        <header
+          className="mac-window-titlebar"
+          onPointerDown={(e) => {
+            if ((e.target as HTMLElement).closest('.mac-traffic-btn')) return;
+            dragTitle.onPointerDown(e);
+          }}
+          onPointerMove={dragTitle.onPointerMove}
+          onPointerUp={dragTitle.onPointerUp}
+          onDoubleClick={() => onToggleZoom(win.id)}
+        >
+          <div className="mac-window-traffic">
+            <button
+              type="button"
+              className="mac-traffic-btn close"
+              onClick={() => onClose(win.id)}
+              aria-label="Close window"
+            >
+              <svg viewBox="0 0 8 8" width="7" height="7">
+                <path d="M1.3 1.3L6.7 6.7M6.7 1.3L1.3 6.7" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              className="mac-traffic-btn minimize"
+              onClick={() => onMinimize(win.id)}
+              aria-label="Minimize window"
+            >
+              <svg viewBox="0 0 8 8" width="7" height="7">
+                <path d="M1.2 4H6.8" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              className="mac-traffic-btn zoom"
+              onClick={() => onToggleZoom(win.id)}
+              aria-label="Zoom window"
+            >
+              <svg viewBox="0 0 8 8" width="7" height="7">
+                <path
+                  d="M1.3 5.1V6.7H2.9M6.7 2.9V1.3H5.1"
+                  stroke="currentColor"
+                  strokeWidth="1.2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  fill="none"
+                />
+              </svg>
+            </button>
+          </div>
+          <span className="mac-window-title">{win.title}</span>
+        </header>
+      )}
       <div className="mac-window-body">{children}</div>
-      {!win.maximized && (
+      {!win.maximized && !bare && (
         <div
           className="mac-window-resize"
           onPointerDown={dragResize.onPointerDown}

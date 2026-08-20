@@ -25,6 +25,12 @@ const APP_IMAGES: Partial<Record<DockAppKind, string>> = {
   files: filesImg,
 };
 
+// these three ship as art with real padding baked into their own canvas
+// (a bin silhouette, a folder, a hand-drawn triangle) rather than full-bleed
+// squares, so they get no tile background/clipping and a bit more room to
+// render at the same visual size as the other icons.
+const FRAMELESS: Partial<Record<DockAppKind, true>> = { trash: true, error: true, files: true };
+
 interface DockProps {
   apps: DockAppData[];
   onLaunch: (app: DockAppData) => void;
@@ -76,6 +82,7 @@ export function Dock({ apps, onLaunch }: DockProps) {
         {apps.map((app) => {
           const isTrash = app.kind === 'trash';
           const isError = app.kind === 'error';
+          const isFrameless = FRAMELESS[app.kind];
           const monogram = MONOGRAM_STYLE[app.kind];
           const image = APP_IMAGES[app.kind];
           return (
@@ -92,7 +99,7 @@ export function Dock({ apps, onLaunch }: DockProps) {
               >
                 <span className="dock-tooltip">{app.label}</span>
                 <span
-                  className={`dock-tile${image ? ' dock-tile-image' : ''}${isTrash ? ' dock-tile-frameless' : ''}${isError ? ' dock-tile-error' : ''}`}
+                  className={`dock-tile${image ? ' dock-tile-image' : ''}${isFrameless ? ' dock-tile-frameless' : ''}`}
                   style={monogram ? { background: monogram.background } : undefined}
                 >
                   {monogram ? (
@@ -103,7 +110,7 @@ export function Dock({ apps, onLaunch }: DockProps) {
                     <img
                       src={image}
                       alt={app.label}
-                      className="dock-tile-img-contain"
+                      className={isFrameless ? 'dock-tile-img-frameless' : 'dock-tile-img-contain'}
                     />
                   ) : null}
                 </span>
