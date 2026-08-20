@@ -78,7 +78,7 @@ export const desktopIcons: DesktopIconData[] = [
     notOpenable: true,
     hideLabel: true,
     x: 61,
-    y: 28,
+    y: 22,
     content: {
       eyebrow: 'Single · Artwork',
       subtitle: 'Add a release date or credit line here.',

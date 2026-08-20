@@ -15,9 +15,9 @@ const TILE_SIZE: Record<DesktopIconData['shape'], { w: number; h: number }> = {
   // sized like a macOS medium widget — notably bigger than a regular icon
   widget: { w: 264, h: 126 },
   // matches the real 3:4 aspect of the cover art so it never gets cropped
-  poster: { w: 69, h: 92 },
+  poster: { w: 86, h: 115 },
   // matches the real ~0.337:1 aspect of the photobooth strip
-  strip: { w: 56, h: 166 },
+  strip: { w: 70, h: 208 },
 };
 
 // these ship as full posed images with their own real aspect ratio — scale
