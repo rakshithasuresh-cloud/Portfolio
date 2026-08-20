@@ -38,6 +38,8 @@ export interface DockAppData {
   id: string;
   label: string;
   kind: DockAppKind;
+  /** When set, clicking the dock icon opens this URL in a new tab instead of launching a placeholder window. */
+  href?: string;
 }
 
 export interface WindowState {

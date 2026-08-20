@@ -6,7 +6,12 @@ export const dockApps: DockAppData[] = [
   { id: 'ai', label: 'Illustrator', kind: 'ai' },
   { id: 'notes', label: 'Notes', kind: 'notes' },
   { id: 'photos', label: 'Photos', kind: 'photos' },
-  { id: 'instagram', label: 'Instagram', kind: 'instagram' },
+  {
+    id: 'instagram',
+    label: 'Instagram',
+    kind: 'instagram',
+    href: 'https://www.instagram.com/moonpie_1478?igsh=MWR2MDdrbnE2NWl6dA==',
+  },
   { id: 'mail', label: 'Mail', kind: 'mail' },
   { id: 'trash', label: 'Trash', kind: 'trash' },
 ];

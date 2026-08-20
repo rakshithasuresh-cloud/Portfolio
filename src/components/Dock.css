@@ -60,6 +60,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   box-shadow: 0 6px 14px -6px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.25);
   position: relative;
   color: #fff;
@@ -69,8 +70,9 @@
 }
 
 .dock-tile svg {
-  width: 24px;
-  height: 24px;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .dock-dot {

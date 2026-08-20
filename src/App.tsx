@@ -139,7 +139,7 @@ function App() {
 
   return (
     <div className="app-root">
-      <MenuBar appName="Your Name" />
+      <MenuBar appName="Rakshitha Suresh" />
       <Desktop icons={desktopIcons} onOpenIcon={openIconWindow} />
 
       {windows.map((win) => (

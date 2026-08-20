@@ -55,6 +55,16 @@
 }
 
 .menubar-icon {
-  font-size: 13px;
-  opacity: 0.9;
+  display: inline-flex;
+  align-items: center;
+  color: #f2f2f2;
+  opacity: 0.92;
+}
+
+.menubar-battery {
+  opacity: 1;
+}
+
+.menubar-datetime {
+  font-weight: 500;
 }
