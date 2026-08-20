@@ -14,7 +14,15 @@ const TILE_SIZE: Record<DesktopIconData['shape'], { w: number; h: number }> = {
   landscape: { w: 94, h: 62 },
   // sized like a macOS medium widget — notably bigger than a regular icon
   widget: { w: 264, h: 126 },
+  // matches the real 3:4 aspect of the cover art so it never gets cropped
+  poster: { w: 69, h: 92 },
+  // matches the real ~0.337:1 aspect of the photobooth strip
+  strip: { w: 56, h: 166 },
 };
+
+// these ship as full posed images with their own real aspect ratio — scale
+// to fit inside the tile instead of cropping to fill it
+const CONTAIN_SHAPES = new Set<DesktopIconData['shape']>(['poster', 'strip']);
 
 interface DesktopIconProps {
   data: DesktopIconData;
@@ -38,10 +46,12 @@ export function DesktopIcon({ data, containerRef, onOpen }: DesktopIconProps) {
       }));
     },
     onEnd: () => setDragging(false),
-    onClick: () => {
-      const rect = buttonRef.current?.getBoundingClientRect() ?? null;
-      onOpen(data, rect);
-    },
+    onClick: data.notOpenable
+      ? undefined
+      : () => {
+          const rect = buttonRef.current?.getBoundingClientRect() ?? null;
+          onOpen(data, rect);
+        },
   });
 
   const size = TILE_SIZE[data.shape];
@@ -54,7 +64,12 @@ export function DesktopIcon({ data, containerRef, onOpen }: DesktopIconProps) {
     '--tile-h': `${size.h}px`,
   } as CSSProperties;
   const tileStyle = data.image
-    ? ({ backgroundImage: `url(${data.image})`, backgroundSize: 'cover', backgroundPosition: 'center' } as CSSProperties)
+    ? ({
+        backgroundImage: `url(${data.image})`,
+        backgroundSize: CONTAIN_SHAPES.has(data.shape) ? 'contain' : 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      } as CSSProperties)
     : undefined;
 
   return (
@@ -66,12 +81,12 @@ export function DesktopIcon({ data, containerRef, onOpen }: DesktopIconProps) {
       onPointerDown={drag.onPointerDown}
       onPointerMove={drag.onPointerMove}
       onPointerUp={drag.onPointerUp}
-      aria-label={`Open ${data.label}`}
+      aria-label={data.notOpenable ? data.label : `Open ${data.label}`}
     >
       <span className={`desktop-icon-tile${data.shape === 'widget' ? ' desktop-icon-tile-widget' : ''}`} style={tileStyle}>
         {!data.image && <span className="desktop-icon-mark">{data.glyph}</span>}
       </span>
-      <span className="desktop-icon-label">{data.label}</span>
+      {!data.hideLabel && <span className="desktop-icon-label">{data.label}</span>}
     </button>
   );
 }

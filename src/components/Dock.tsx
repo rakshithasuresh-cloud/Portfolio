@@ -132,7 +132,7 @@ export function Dock({ apps, onLaunch }: DockProps) {
                   href={app.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`dock-item${bouncing === app.id ? ' is-bouncing' : ''}`}
+                  className={`dock-item${bouncing === app.id ? ' is-bouncing' : ''}${isTrash ? ' dock-item-anchor-bottom' : ''}`}
                   onClick={() => handleClick(app)}
                   aria-label={app.label}
                 >
@@ -144,7 +144,7 @@ export function Dock({ apps, onLaunch }: DockProps) {
                   ref={(el) => {
                     itemRefs.current[app.id] = el;
                   }}
-                  className={`dock-item${bouncing === app.id ? ' is-bouncing' : ''}`}
+                  className={`dock-item${bouncing === app.id ? ' is-bouncing' : ''}${isTrash ? ' dock-item-anchor-bottom' : ''}`}
                   onClick={() => handleClick(app)}
                   aria-label={app.label}
                 >

@@ -1,5 +1,8 @@
 import type { DesktopIconData } from '../types';
 import discoImg from '../assets/desktop/disco.png';
+import atonementImg from '../assets/desktop/atonement.jpg';
+import herImg from '../assets/desktop/her.jpg';
+import photostripImg from '../assets/desktop/photostrip.jpg';
 
 export const desktopIcons: DesktopIconData[] = [
   {
@@ -44,12 +47,13 @@ export const desktopIcons: DesktopIconData[] = [
   },
   {
     id: 'trasa-konca-swiata',
-    label: 'Trasa Końca Świata',
+    label: 'Atonement',
     kind: 'document',
-    shape: 'portrait',
+    shape: 'poster',
     glyph: '✦',
     accent: '#b98b8f',
     accent2: '#7a4b52',
+    image: atonementImg,
     x: 58,
     y: 44,
     content: {
@@ -64,12 +68,15 @@ export const desktopIcons: DesktopIconData[] = [
   },
   {
     id: 'wtf',
-    label: 'WTF',
+    label: 'Photo strip',
     kind: 'music',
-    shape: 'square',
+    shape: 'strip',
     glyph: '♫',
     accent: '#c7883a',
     accent2: '#8a5a1f',
+    image: photostripImg,
+    notOpenable: true,
+    hideLabel: true,
     x: 61,
     y: 28,
     content: {
@@ -83,12 +90,13 @@ export const desktopIcons: DesktopIconData[] = [
   },
   {
     id: 'pierwszy-swag',
-    label: 'Pierwszy Swag w Polsce',
+    label: 'Her',
     kind: 'document',
-    shape: 'portrait',
+    shape: 'poster',
     glyph: '✎',
     accent: '#d94f6a',
     accent2: '#8f2f45',
+    image: herImg,
     x: 46,
     y: 30,
     content: {

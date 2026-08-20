@@ -13,7 +13,7 @@
   position: relative;
   pointer-events: auto;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 16px;
   padding: 9px 16px;
   background: rgba(18, 18, 20, 0.4);
@@ -47,6 +47,11 @@
   transform-origin: bottom center;
   transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform;
+}
+
+/* trash sits heavier/lower than the rest, like it's resting on the shelf */
+.dock-item-anchor-bottom {
+  align-self: flex-end;
 }
 
 .dock-item:focus-visible {
