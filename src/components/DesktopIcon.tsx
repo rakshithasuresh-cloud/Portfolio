@@ -13,7 +13,7 @@ const TILE_SIZE: Record<DesktopIconData['shape'], { w: number; h: number }> = {
   portrait: { w: 62, h: 86 },
   landscape: { w: 94, h: 62 },
   // sized like a macOS medium widget — notably bigger than a regular icon
-  widget: { w: 220, h: 105 },
+  widget: { w: 180, h: 144 },
 };
 
 interface DesktopIconProps {
@@ -68,7 +68,7 @@ export function DesktopIcon({ data, containerRef, onOpen }: DesktopIconProps) {
       onPointerUp={drag.onPointerUp}
       aria-label={`Open ${data.label}`}
     >
-      <span className="desktop-icon-tile" style={tileStyle}>
+      <span className={`desktop-icon-tile${data.shape === 'widget' ? ' desktop-icon-tile-widget' : ''}`} style={tileStyle}>
         {!data.image && <span className="desktop-icon-mark">{data.glyph}</span>}
       </span>
       <span className="desktop-icon-label">{data.label}</span>

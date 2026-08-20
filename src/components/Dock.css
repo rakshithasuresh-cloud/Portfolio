@@ -108,6 +108,16 @@
   -webkit-user-drag: none;
 }
 
+.dock-tile-img-frameless-files {
+  width: 84px;
+  height: 84px;
+}
+
+.dock-tile-img-frameless-trash {
+  width: 58px;
+  height: 58px;
+}
+
 .dock-dot {
   position: absolute;
   bottom: -8px;

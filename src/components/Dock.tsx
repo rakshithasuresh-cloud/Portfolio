@@ -110,7 +110,11 @@ export function Dock({ apps, onLaunch }: DockProps) {
                     <img
                       src={image}
                       alt={app.label}
-                      className={isFrameless ? 'dock-tile-img-frameless' : 'dock-tile-img-contain'}
+                      className={
+                        isFrameless
+                          ? `dock-tile-img-frameless${app.kind === 'files' ? ' dock-tile-img-frameless-files' : ''}${isTrash ? ' dock-tile-img-frameless-trash' : ''}`
+                          : 'dock-tile-img-contain'
+                      }
                     />
                   ) : null}
                 </span>

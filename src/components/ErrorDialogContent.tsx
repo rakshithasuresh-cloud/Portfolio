@@ -10,7 +10,7 @@ export function ErrorDialogContent({ onTryAgain }: ErrorDialogContentProps) {
     <div className="error-dialog">
       <div className="error-dialog-row">
         <WarningTriangle className="error-dialog-icon" />
-        <p className="error-dialog-text">Graphic designer just lost his mind. Shame he didn't have a hard drive copy.</p>
+        <p className="error-dialog-text">This user just lost her mind. Shame she didn't have a hard drive copy.</p>
       </div>
       <div className="error-dialog-actions">
         <button type="button" className="error-dialog-btn" onClick={onTryAgain}>

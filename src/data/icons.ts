@@ -1,5 +1,5 @@
 import type { DesktopIconData } from '../types';
-import discoImg from '../assets/desktop/disco.jpg';
+import discoImg from '../assets/desktop/disco.png';
 
 export const desktopIcons: DesktopIconData[] = [
   {

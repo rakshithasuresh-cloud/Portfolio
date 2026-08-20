@@ -6,7 +6,7 @@ export function WarningTriangle({ className }: WarningTriangleProps) {
   return (
     <svg viewBox="0 0 48 48" className={className}>
       <path
-        d="M24 5.5L44.5 40a3 3 0 01-2.6 4.5H6.1A3 3 0 013.5 40L24 5.5z"
+        d="M26.79 9.31 L41.21 36.69 A5 5 0 0 1 38 42 L10 42 A5 5 0 0 1 6.79 36.69 L21.21 9.31 A5 5 0 0 1 26.79 9.31 Z"
         fill="#ffcc33"
         stroke="#000"
         strokeWidth="2.4"

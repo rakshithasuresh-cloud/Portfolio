@@ -30,6 +30,11 @@
   transition: transform 0.16s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.16s ease, filter 0.16s ease;
 }
 
+/* AirPods-case-style rounding for the widget-sized icon */
+.desktop-icon-tile-widget {
+  border-radius: 26px;
+}
+
 /* soft directional light, like a photographed surface rather than a flat icon fill */
 .desktop-icon-tile::before {
   content: '';
