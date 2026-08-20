@@ -1,0 +1,64 @@
+import type { CSSProperties } from 'react';
+import type { DesktopIconData } from '../types';
+import './WindowContent.css';
+
+interface WindowContentProps {
+  icon: DesktopIconData;
+}
+
+export function WindowContent({ icon }: WindowContentProps) {
+  const { content } = icon;
+  const style = {
+    '--accent': icon.accent,
+    '--accent2': icon.accent2,
+    '--dot': icon.accent,
+  } as CSSProperties;
+
+  return (
+    <div className="wc" style={style}>
+      <div className="wc-eyebrow">
+        <span className="wc-eyebrow-dot" />
+        {content.eyebrow}
+      </div>
+      <h1 className="wc-title">{icon.label}</h1>
+      <p className="wc-subtitle">{content.subtitle}</p>
+
+      <div className="wc-cover">
+        <span className="wc-cover-glyph">{icon.glyph}</span>
+        <span className="wc-cover-tag">Placeholder cover</span>
+      </div>
+
+      <div className="wc-body">
+        {content.body.map((paragraph, i) => (
+          <p key={i}>{paragraph}</p>
+        ))}
+      </div>
+
+      {content.showImageGrid && (
+        <div className="wc-grid">
+          {[0, 1, 2].map((i) => (
+            <div className="wc-grid-tile" key={i}>
+              {icon.glyph}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {content.showVideo && (
+        <div className="wc-video">
+          <span className="wc-play">▶</span>
+        </div>
+      )}
+
+      {content.linkLabel && (
+        <a
+          className="wc-link"
+          href="#"
+          onClick={(e) => e.preventDefault()}
+        >
+          {content.linkLabel} →
+        </a>
+      )}
+    </div>
+  );
+}

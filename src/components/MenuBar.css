@@ -1,0 +1,60 @@
+.menubar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--menubar-h);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  background: var(--glass-dark);
+  backdrop-filter: blur(24px) saturate(1.5);
+  -webkit-backdrop-filter: blur(24px) saturate(1.5);
+  border-bottom: 1px solid var(--hairline-dark);
+  color: #f2f2f2;
+  font-size: 13px;
+  user-select: none;
+}
+
+.menubar-left,
+.menubar-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 100%;
+}
+
+.menubar-apple {
+  font-size: 15px;
+  line-height: 1;
+  opacity: 0.95;
+  padding-top: 1px;
+}
+
+.menubar-appname {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.menubar-item {
+  opacity: 0.82;
+  cursor: default;
+  transition: opacity 0.12s ease;
+}
+
+.menubar-item:hover {
+  opacity: 1;
+}
+
+.menubar-right .menubar-item {
+  font-variant-numeric: tabular-nums;
+  opacity: 0.9;
+  font-size: 12.5px;
+}
+
+.menubar-icon {
+  font-size: 13px;
+  opacity: 0.9;
+}

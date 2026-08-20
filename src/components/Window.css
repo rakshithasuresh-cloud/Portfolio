@@ -1,0 +1,130 @@
+.mac-window {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: var(--glass-light);
+  backdrop-filter: blur(30px) saturate(1.8);
+  -webkit-backdrop-filter: blur(30px) saturate(1.8);
+  border-radius: var(--radius-window);
+  box-shadow: var(--shadow-window);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  overflow: hidden;
+  animation: window-in 0.22s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  min-width: 320px;
+  min-height: 220px;
+}
+
+@keyframes window-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.mac-window.is-closing {
+  animation: window-out 0.16s ease both;
+}
+
+@keyframes window-out {
+  to {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+}
+
+.mac-window-titlebar {
+  height: 40px;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.18));
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  position: relative;
+}
+
+.mac-window-titlebar:active {
+  cursor: grabbing;
+}
+
+.mac-window-traffic {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  z-index: 2;
+}
+
+.mac-traffic-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0);
+  font-size: 8px;
+  line-height: 1;
+}
+
+.mac-traffic-btn.close {
+  background: #ff5f57;
+}
+.mac-traffic-btn.minimize {
+  background: #febc2e;
+}
+.mac-traffic-btn.zoom {
+  background: #28c840;
+}
+
+.mac-window-titlebar:hover .mac-traffic-btn {
+  color: rgba(65, 20, 0, 0.65);
+}
+
+.mac-window-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: rgba(20, 20, 22, 0.78);
+  pointer-events: none;
+}
+
+.mac-window-body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  background: var(--paper);
+}
+
+.mac-window-resize {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 18px;
+  height: 18px;
+  cursor: nwse-resize;
+  touch-action: none;
+}
+
+.mac-window-resize::after {
+  content: '';
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid rgba(0, 0, 0, 0.22);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.22);
+}

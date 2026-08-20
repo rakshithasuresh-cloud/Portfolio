@@ -1,0 +1,126 @@
+.dock-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  z-index: 9000;
+  pointer-events: none;
+}
+
+.dock {
+  pointer-events: auto;
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  padding: 10px 12px 8px;
+  background: var(--glass-dark-strong);
+  backdrop-filter: blur(26px) saturate(1.6);
+  -webkit-backdrop-filter: blur(26px) saturate(1.6);
+  border-radius: var(--radius-dock);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: var(--shadow-dock);
+}
+
+.dock-divider {
+  align-self: stretch;
+  width: 1px;
+  margin: 6px 2px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.dock-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transform: scale(var(--scale, 1)) translateY(calc((var(--scale, 1) - 1) * -14px));
+  transform-origin: bottom center;
+  will-change: transform;
+}
+
+.dock-tile {
+  width: 52px;
+  height: 52px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 14px -6px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  position: relative;
+  color: #fff;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+}
+
+.dock-tile svg {
+  width: 24px;
+  height: 24px;
+}
+
+.dock-dot {
+  position: absolute;
+  bottom: -8px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.dock-item.is-active .dock-dot {
+  opacity: 1;
+}
+
+.dock-tooltip {
+  position: absolute;
+  bottom: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(30, 30, 32, 0.92);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.12s ease;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+.dock-item:hover .dock-tooltip {
+  opacity: 1;
+}
+
+.dock-item:active .dock-tile {
+  filter: brightness(0.85);
+}
+
+@keyframes dock-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-16px);
+  }
+  55% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-6px);
+  }
+}
+
+.dock-item.is-bouncing .dock-tile {
+  animation: dock-bounce 0.5s ease;
+}

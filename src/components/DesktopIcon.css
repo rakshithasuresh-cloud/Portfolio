@@ -1,0 +1,83 @@
+.desktop-icon {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 104px;
+  padding: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  touch-action: none;
+  z-index: 1;
+}
+
+.desktop-icon:focus-visible .desktop-icon-tile {
+  outline: 2px solid rgba(255, 255, 255, 0.85);
+  outline-offset: 3px;
+}
+
+.desktop-icon-tile {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-icon);
+  background: linear-gradient(155deg, var(--accent) 0%, var(--accent2) 100%);
+  box-shadow: var(--shadow-icon), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.16s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.16s ease;
+  position: relative;
+}
+
+.desktop-icon-tile::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.desktop-icon-glyph {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.94);
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
+}
+
+.desktop-icon-label {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  line-height: 1.25;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55), 0 1px 12px rgba(0, 0, 0, 0.3);
+  padding: 2px 7px;
+  border-radius: 4px;
+  transition: background-color 0.14s ease;
+}
+
+.desktop-icon:hover .desktop-icon-tile {
+  transform: translateY(-3px) scale(1.07);
+  box-shadow: 0 16px 26px -8px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.desktop-icon:hover .desktop-icon-label {
+  background-color: rgba(20, 20, 22, 0.4);
+}
+
+.desktop-icon:active .desktop-icon-tile {
+  transform: translateY(-1px) scale(1.02);
+}
+
+.desktop-icon.is-dragging {
+  z-index: 500;
+}
+
+.desktop-icon.is-dragging .desktop-icon-tile {
+  transform: scale(1.1);
+  box-shadow: 0 20px 34px -10px rgba(0, 0, 0, 0.6);
+}

@@ -1,0 +1,48 @@
+.app-root {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #000;
+}
+
+.minimized-tray {
+  position: absolute;
+  left: 16px;
+  bottom: calc(var(--dock-h) + 18px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 9500;
+}
+
+.minimized-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px 7px 9px;
+  border-radius: 8px;
+  background: var(--glass-dark-strong);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #f2f2f2;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 18px -8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.12s ease, background-color 0.12s ease;
+}
+
+.minimized-chip:hover {
+  transform: translateX(2px);
+  background-color: rgba(30, 30, 32, 0.72);
+}
+
+.minimized-chip-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--dot, #febc2e);
+  flex: none;
+}
