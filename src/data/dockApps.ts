@@ -1,9 +1,9 @@
 import type { DockAppData } from '../types';
 
 export const dockApps: DockAppData[] = [
-  { id: 'ps', label: 'Photoshop', kind: 'ps' },
   { id: 'files', label: 'Files', kind: 'files' },
   { id: 'notes', label: 'Notes', kind: 'notes' },
+  { id: 'linkedin', label: 'LinkedIn', kind: 'linkedin' },
   { id: 'photos', label: 'Photos', kind: 'photos' },
   {
     id: 'instagram',

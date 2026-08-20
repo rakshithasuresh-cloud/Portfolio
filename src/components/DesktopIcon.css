@@ -30,9 +30,9 @@
   transition: transform 0.16s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.16s ease, filter 0.16s ease;
 }
 
-/* AirPods-case-style rounding for the widget-sized icon */
+/* rounded corners for the widget-sized icon, matched to its wider aspect */
 .desktop-icon-tile-widget {
-  border-radius: 26px;
+  border-radius: 18px;
 }
 
 /* soft directional light, like a photographed surface rather than a flat icon fill */

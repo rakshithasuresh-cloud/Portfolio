@@ -6,15 +6,12 @@ import notesImg from '../assets/dock/notes.png';
 import photosImg from '../assets/dock/photos.png';
 import trashImg from '../assets/dock/trash.png';
 import filesImg from '../assets/dock/files.png';
+import linkedinImg from '../assets/dock/linkedin.webp';
 import { WarningTriangle } from './WarningTriangle';
 import './Dock.css';
 
 const MAX_SCALE = 1.45;
 const FALLOFF = 34; // px — smaller = sharper drop-off between neighbors
-
-const MONOGRAM_STYLE: Partial<Record<DockAppKind, { background: string; label: string }>> = {
-  ps: { background: 'linear-gradient(160deg,#5bc8ff 0%,#001c37 100%)', label: 'Ps' },
-};
 
 const APP_IMAGES: Partial<Record<DockAppKind, string>> = {
   instagram: instagramImg,
@@ -23,6 +20,7 @@ const APP_IMAGES: Partial<Record<DockAppKind, string>> = {
   photos: photosImg,
   trash: trashImg,
   files: filesImg,
+  linkedin: linkedinImg,
 };
 
 // these three ship as art with real padding baked into their own canvas
@@ -39,7 +37,7 @@ interface DockProps {
 export function Dock({ apps, onLaunch }: DockProps) {
   const [bouncing, setBouncing] = useState<string | null>(null);
   const dockRef = useRef<HTMLDivElement>(null);
-  const itemRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+  const itemRefs = useRef<Record<string, HTMLElement | null>>({});
 
   const handleMouseMove = (e: React.MouseEvent) => {
     const dockRect = dockRef.current?.getBoundingClientRect();
@@ -69,11 +67,10 @@ export function Dock({ apps, onLaunch }: DockProps) {
   const handleClick = (app: DockAppData) => {
     setBouncing(app.id);
     window.setTimeout(() => setBouncing(null), 500);
-    if (app.href) {
-      window.open(app.href, '_blank', 'noopener,noreferrer');
-      return;
-    }
-    onLaunch(app);
+    if (!app.href) onLaunch(app);
+    // href apps navigate natively via the <a> element below — a real
+    // anchor click is a more reliable "open in a new tab" than a JS
+    // window.open() call, which some sandboxes/popup blockers refuse.
   };
 
   return (
@@ -83,43 +80,60 @@ export function Dock({ apps, onLaunch }: DockProps) {
           const isTrash = app.kind === 'trash';
           const isError = app.kind === 'error';
           const isFrameless = FRAMELESS[app.kind];
-          const monogram = MONOGRAM_STYLE[app.kind];
           const image = APP_IMAGES[app.kind];
+
+          const inner = (
+            <>
+              <span className="dock-tooltip">{app.label}</span>
+              <span className={`dock-tile${image ? ' dock-tile-image' : ''}${isFrameless ? ' dock-tile-frameless' : ''}`}>
+                {isError ? (
+                  <WarningTriangle className="dock-tile-warning" />
+                ) : image ? (
+                  <img
+                    src={image}
+                    alt={app.label}
+                    className={
+                      isFrameless
+                        ? `dock-tile-img-frameless${app.kind === 'files' ? ' dock-tile-img-frameless-files' : ''}${isTrash ? ' dock-tile-img-frameless-trash' : ''}`
+                        : 'dock-tile-img-contain'
+                    }
+                  />
+                ) : null}
+              </span>
+              <span className="dock-dot" />
+            </>
+          );
+
           return (
             <div key={app.id} style={{ display: 'contents' }}>
               {isTrash && <div className="dock-divider" />}
-              <button
-                type="button"
-                ref={(el) => {
-                  itemRefs.current[app.id] = el;
-                }}
-                className={`dock-item${bouncing === app.id ? ' is-bouncing' : ''}`}
-                onClick={() => handleClick(app)}
-                aria-label={app.label}
-              >
-                <span className="dock-tooltip">{app.label}</span>
-                <span
-                  className={`dock-tile${image ? ' dock-tile-image' : ''}${isFrameless ? ' dock-tile-frameless' : ''}`}
-                  style={monogram ? { background: monogram.background } : undefined}
+              {app.href ? (
+                <a
+                  ref={(el) => {
+                    itemRefs.current[app.id] = el;
+                  }}
+                  href={app.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`dock-item${bouncing === app.id ? ' is-bouncing' : ''}`}
+                  onClick={() => handleClick(app)}
+                  aria-label={app.label}
                 >
-                  {monogram ? (
-                    monogram.label
-                  ) : isError ? (
-                    <WarningTriangle className="dock-tile-warning" />
-                  ) : image ? (
-                    <img
-                      src={image}
-                      alt={app.label}
-                      className={
-                        isFrameless
-                          ? `dock-tile-img-frameless${app.kind === 'files' ? ' dock-tile-img-frameless-files' : ''}${isTrash ? ' dock-tile-img-frameless-trash' : ''}`
-                          : 'dock-tile-img-contain'
-                      }
-                    />
-                  ) : null}
-                </span>
-                <span className="dock-dot" />
-              </button>
+                  {inner}
+                </a>
+              ) : (
+                <button
+                  type="button"
+                  ref={(el) => {
+                    itemRefs.current[app.id] = el;
+                  }}
+                  className={`dock-item${bouncing === app.id ? ' is-bouncing' : ''}`}
+                  onClick={() => handleClick(app)}
+                  aria-label={app.label}
+                >
+                  {inner}
+                </button>
+              )}
             </div>
           );
         })}

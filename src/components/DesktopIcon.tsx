@@ -13,7 +13,7 @@ const TILE_SIZE: Record<DesktopIconData['shape'], { w: number; h: number }> = {
   portrait: { w: 62, h: 86 },
   landscape: { w: 94, h: 62 },
   // sized like a macOS medium widget — notably bigger than a regular icon
-  widget: { w: 180, h: 144 },
+  widget: { w: 264, h: 126 },
 };
 
 interface DesktopIconProps {

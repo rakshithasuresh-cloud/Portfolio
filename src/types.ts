@@ -27,7 +27,7 @@ export interface DesktopIconData {
 }
 
 export type DockAppKind =
-  | 'ps'
+  | 'linkedin'
   | 'files'
   | 'notes'
   | 'photos'

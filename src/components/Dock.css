@@ -40,6 +40,8 @@
   border: none;
   padding: 0;
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
   /* base stays glued to the dock shelf: bottom-anchored scale only, no translate */
   transform: scale(var(--scale, 1));
   transform-origin: bottom center;
@@ -86,8 +88,8 @@
 }
 
 .dock-tile-warning {
-  width: 46px;
-  height: 46px;
+  width: 56px;
+  height: 56px;
 }
 
 .dock-tile-img-contain {
@@ -114,8 +116,8 @@
 }
 
 .dock-tile-img-frameless-trash {
-  width: 58px;
-  height: 58px;
+  width: 48px;
+  height: 48px;
 }
 
 .dock-dot {
@@ -165,13 +167,13 @@
     transform: translateY(0);
   }
   30% {
-    transform: translateY(-16px);
+    transform: translateY(-7px);
   }
   55% {
     transform: translateY(0);
   }
   70% {
-    transform: translateY(-6px);
+    transform: translateY(-2.5px);
   }
 }
 
