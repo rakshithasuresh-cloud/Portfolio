@@ -29,6 +29,14 @@ const APP_IMAGES: Partial<Record<DockAppKind, string>> = {
 // render at the same visual size as the other icons.
 const FRAMELESS: Partial<Record<DockAppKind, true>> = { trash: true, error: true, files: true };
 
+const COMPACT: Partial<Record<DockAppKind, true>> = {
+  notes: true,
+  linkedin: true,
+  photos: true,
+  instagram: true,
+  mail: true,
+};
+
 interface DockProps {
   apps: DockAppData[];
   onLaunch: (app: DockAppData) => void;
@@ -80,12 +88,15 @@ export function Dock({ apps, onLaunch }: DockProps) {
           const isTrash = app.kind === 'trash';
           const isError = app.kind === 'error';
           const isFrameless = FRAMELESS[app.kind];
+          const isCompact = COMPACT[app.kind];
           const image = APP_IMAGES[app.kind];
 
           const inner = (
             <>
               <span className="dock-tooltip">{app.label}</span>
-              <span className={`dock-tile${image ? ' dock-tile-image' : ''}${isFrameless ? ' dock-tile-frameless' : ''}`}>
+              <span
+                className={`dock-tile${image ? ' dock-tile-image' : ''}${isFrameless ? ' dock-tile-frameless' : ''}${isCompact ? ' dock-tile-compact' : ''}`}
+              >
                 {isError ? (
                   <WarningTriangle className="dock-tile-warning" />
                 ) : image ? (

@@ -75,6 +75,11 @@
   background: rgba(255, 255, 255, 0.06);
 }
 
+.dock-tile-compact {
+  width: 44px;
+  height: 44px;
+}
+
 /* files/error/trash art already reads as a complete icon on its own — no
    tinted backing, clipping shape, or inset ring, just the ambient drop
    shadow the rest of the dock shares, and room to render a bit larger than
