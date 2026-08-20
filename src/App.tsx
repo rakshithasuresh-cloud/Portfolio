@@ -7,12 +7,15 @@ import { Window } from './components/Window';
 import { WindowContent } from './components/WindowContent';
 import { AppPlaceholderContent } from './components/AppPlaceholderContent';
 import { ErrorDialogContent } from './components/ErrorDialogContent';
+import { NotesInfoContent } from './components/NotesInfoContent';
 import { desktopIcons } from './data/icons';
 import { dockApps } from './data/dockApps';
 import type { DesktopIconData, DockAppData, WindowState } from './types';
 
 const DEFAULT_W = 560;
 const DEFAULT_H = 480;
+const OWNER_NAME = 'Rakshitha Suresh';
+const OWNER_EMAIL = 'vsrakshitha1864@gmail.com';
 
 function clamp(value: number, min: number, max: number) {
   return Math.min(max, Math.max(min, value));
@@ -71,11 +74,19 @@ function App() {
       if (existing) {
         return ws.map((w) => (w.id === existing.id ? { ...w, minimized: false, zIndex: nextZ() } : w));
       }
-      const rect = computeSpawnRect(null, app.kind === 'error' ? 440 : 380, app.kind === 'error' ? 190 : 220);
+      const width = app.kind === 'error' ? 440 : app.kind === 'notes' ? 640 : 380;
+      const height = app.kind === 'error' ? 190 : app.kind === 'notes' ? 460 : 220;
+      const rect = computeSpawnRect(null, width, height);
+      const title =
+        app.kind === 'error'
+          ? 'Adobe Error'
+          : app.kind === 'notes'
+            ? `Information about: ${OWNER_NAME}, ${OWNER_EMAIL}`
+            : app.label;
       const win: WindowState = {
         id: `${key}-${Date.now()}`,
         iconId: key,
-        title: app.kind === 'error' ? 'Adobe Error' : app.label,
+        title,
         ...rect,
         zIndex: nextZ(),
         minimized: false,
@@ -140,7 +151,7 @@ function App() {
 
   return (
     <div className="app-root">
-      <MenuBar appName="Rakshitha Suresh" />
+      <MenuBar appName={OWNER_NAME} />
       <Desktop icons={desktopIcons} onOpenIcon={openIconWindow} />
 
       {windows.map((win) => (
@@ -160,6 +171,8 @@ function App() {
             <WindowContent icon={win.icon} />
           ) : win.app?.kind === 'error' ? (
             <ErrorDialogContent onTryAgain={() => closeWindow(win.id)} />
+          ) : win.app?.kind === 'notes' ? (
+            <NotesInfoContent />
           ) : win.app ? (
             <AppPlaceholderContent app={win.app} />
           ) : null}

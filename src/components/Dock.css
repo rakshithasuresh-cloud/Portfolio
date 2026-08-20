@@ -16,7 +16,7 @@
   align-items: flex-end;
   gap: 16px;
   padding: 10px 16px 8px;
-  background: var(--glass-dark-strong);
+  background: rgba(18, 18, 20, 0.4);
   backdrop-filter: blur(26px) saturate(1.6);
   -webkit-backdrop-filter: blur(26px) saturate(1.6);
   border-radius: var(--radius-dock);
@@ -167,13 +167,13 @@
     transform: translateY(0);
   }
   30% {
-    transform: translateY(-7px);
+    transform: translateY(-3px);
   }
   55% {
     transform: translateY(0);
   }
   70% {
-    transform: translateY(-2.5px);
+    transform: translateY(-1px);
   }
 }
 
