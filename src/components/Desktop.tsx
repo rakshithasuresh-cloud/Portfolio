@@ -1,6 +1,7 @@
 import { useRef, type RefObject } from 'react';
 import { DesktopIcon } from './DesktopIcon';
 import type { DesktopIconData } from '../types';
+import wallpaperImg from '../assets/wallpaper.jpg';
 import './Desktop.css';
 
 interface DesktopProps {
@@ -13,7 +14,7 @@ export function Desktop({ icons, onOpenIcon }: DesktopProps) {
 
   return (
     <div className="desktop" ref={containerRef}>
-      <div className="desktop-wallpaper" />
+      <div className="desktop-wallpaper" style={{ backgroundImage: `url(${wallpaperImg})` }} />
       <div className="desktop-vignette" />
       <div className="desktop-icons">
         {icons.map((icon) => (
