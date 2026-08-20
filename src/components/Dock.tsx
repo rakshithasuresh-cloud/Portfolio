@@ -95,7 +95,7 @@ export function Dock({ apps, onLaunch }: DockProps) {
               >
                 <span className="dock-tooltip">{app.label}</span>
                 <span
-                  className={`dock-tile${image ? ' dock-tile-image' : ''}`}
+                  className={`dock-tile${image ? ' dock-tile-image' : ''}${isTrash ? ' dock-tile-frameless' : ''}`}
                   style={monogram ? { background: monogram.background } : undefined}
                 >
                   {monogram ? (
