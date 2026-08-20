@@ -37,6 +37,12 @@ const COMPACT: Partial<Record<DockAppKind, true>> = {
   mail: true,
 };
 
+const DIVIDER_BEFORE: Partial<Record<DockAppKind, true>> = {
+  linkedin: true,
+  mail: true,
+  trash: true,
+};
+
 interface DockProps {
   apps: DockAppData[];
   onLaunch: (app: DockAppData) => void;
@@ -117,7 +123,7 @@ export function Dock({ apps, onLaunch }: DockProps) {
 
           return (
             <div key={app.id} style={{ display: 'contents' }}>
-              {isTrash && <div className="dock-divider" />}
+              {DIVIDER_BEFORE[app.kind] && <div className="dock-divider" />}
               {app.href ? (
                 <a
                   ref={(el) => {
