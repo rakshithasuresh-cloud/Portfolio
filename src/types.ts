@@ -25,13 +25,13 @@ export interface DesktopIconData {
 }
 
 export type DockAppKind =
-  | 'ae'
   | 'ps'
-  | 'ai'
+  | 'files'
   | 'notes'
   | 'photos'
   | 'instagram'
   | 'mail'
+  | 'error'
   | 'trash';
 
 export interface DockAppData {

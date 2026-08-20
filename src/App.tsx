@@ -6,6 +6,7 @@ import { Dock } from './components/Dock';
 import { Window } from './components/Window';
 import { WindowContent } from './components/WindowContent';
 import { AppPlaceholderContent } from './components/AppPlaceholderContent';
+import { ErrorDialogContent } from './components/ErrorDialogContent';
 import { desktopIcons } from './data/icons';
 import { dockApps } from './data/dockApps';
 import type { DesktopIconData, DockAppData, WindowState } from './types';
@@ -70,7 +71,7 @@ function App() {
       if (existing) {
         return ws.map((w) => (w.id === existing.id ? { ...w, minimized: false, zIndex: nextZ() } : w));
       }
-      const rect = computeSpawnRect(null, 380, 220);
+      const rect = computeSpawnRect(null, app.kind === 'error' ? 440 : 380, app.kind === 'error' ? 190 : 220);
       const win: WindowState = {
         id: `${key}-${Date.now()}`,
         iconId: key,
@@ -154,7 +155,13 @@ function App() {
           onMove={moveWindow}
           onResize={resizeWindow}
         >
-          {win.icon ? <WindowContent icon={win.icon} /> : win.app ? <AppPlaceholderContent app={win.app} /> : null}
+          {win.icon ? (
+            <WindowContent icon={win.icon} />
+          ) : win.app?.kind === 'error' ? (
+            <ErrorDialogContent onTryAgain={() => closeWindow(win.id)} />
+          ) : win.app ? (
+            <AppPlaceholderContent app={win.app} />
+          ) : null}
         </Window>
       ))}
 

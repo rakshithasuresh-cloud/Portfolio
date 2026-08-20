@@ -5,15 +5,15 @@ import mailImg from '../assets/dock/mail.webp';
 import notesImg from '../assets/dock/notes.png';
 import photosImg from '../assets/dock/photos.png';
 import trashImg from '../assets/dock/trash.png';
+import filesImg from '../assets/dock/files.png';
+import { WarningTriangle } from './WarningTriangle';
 import './Dock.css';
 
 const MAX_SCALE = 1.45;
 const FALLOFF = 34; // px — smaller = sharper drop-off between neighbors
 
 const MONOGRAM_STYLE: Partial<Record<DockAppKind, { background: string; label: string }>> = {
-  ae: { background: 'linear-gradient(160deg,#b9a9ff 0%,#1a0b57 100%)', label: 'Ae' },
   ps: { background: 'linear-gradient(160deg,#5bc8ff 0%,#001c37 100%)', label: 'Ps' },
-  ai: { background: 'linear-gradient(160deg,#ffb27a 0%,#4a1900 100%)', label: 'Ai' },
 };
 
 const APP_IMAGES: Partial<Record<DockAppKind, string>> = {
@@ -22,12 +22,8 @@ const APP_IMAGES: Partial<Record<DockAppKind, string>> = {
   notes: notesImg,
   photos: photosImg,
   trash: trashImg,
+  files: filesImg,
 };
-
-// notes/photos/instagram/mail already ship as pre-rounded squircle art with
-// transparent corners; trash is a cropped photo that needs the tile itself
-// to do the rounding + cropping.
-const COVER_FIT: Partial<Record<DockAppKind, true>> = { trash: true };
 
 interface DockProps {
   apps: DockAppData[];
@@ -79,6 +75,7 @@ export function Dock({ apps, onLaunch }: DockProps) {
       <div className="dock" ref={dockRef} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
         {apps.map((app) => {
           const isTrash = app.kind === 'trash';
+          const isError = app.kind === 'error';
           const monogram = MONOGRAM_STYLE[app.kind];
           const image = APP_IMAGES[app.kind];
           return (
@@ -95,16 +92,18 @@ export function Dock({ apps, onLaunch }: DockProps) {
               >
                 <span className="dock-tooltip">{app.label}</span>
                 <span
-                  className={`dock-tile${image ? ' dock-tile-image' : ''}${isTrash ? ' dock-tile-frameless' : ''}`}
+                  className={`dock-tile${image ? ' dock-tile-image' : ''}${isTrash ? ' dock-tile-frameless' : ''}${isError ? ' dock-tile-error' : ''}`}
                   style={monogram ? { background: monogram.background } : undefined}
                 >
                   {monogram ? (
                     monogram.label
+                  ) : isError ? (
+                    <WarningTriangle className="dock-tile-warning" />
                   ) : image ? (
                     <img
                       src={image}
                       alt={app.label}
-                      className={COVER_FIT[app.kind] ? 'dock-tile-img-cover' : 'dock-tile-img-contain'}
+                      className="dock-tile-img-contain"
                     />
                   ) : null}
                 </span>

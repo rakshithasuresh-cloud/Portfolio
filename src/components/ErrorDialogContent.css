@@ -1,0 +1,58 @@
+.error-dialog {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  padding: 22px 26px 26px;
+  background: #232326;
+  color: #f2f2f2;
+}
+
+.error-dialog-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.error-dialog-icon {
+  flex: none;
+  width: 34px;
+  height: 34px;
+  margin-top: 2px;
+}
+
+.error-dialog-text {
+  margin: 0;
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #f2f2f2;
+}
+
+.error-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.error-dialog-btn {
+  border: none;
+  border-radius: 6px;
+  background: var(--link-blue);
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: filter 0.12s ease, transform 0.12s ease;
+}
+
+.error-dialog-btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.error-dialog-btn:active {
+  transform: translateY(0);
+  filter: brightness(0.95);
+}
