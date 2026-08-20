@@ -17,7 +17,7 @@ const TILE_SIZE: Record<DesktopIconData['shape'], { w: number; h: number }> = {
   // matches the real 3:4 aspect of the cover art so it never gets cropped
   poster: { w: 86, h: 115 },
   // matches the real ~0.337:1 aspect of the photobooth strip
-  strip: { w: 70, h: 208 },
+  strip: { w: 80, h: 237 },
 };
 
 // these ship as full posed images with their own real aspect ratio — scale
