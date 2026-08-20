@@ -85,7 +85,9 @@ export function Window({
             onClick={() => onClose(win.id)}
             aria-label="Close window"
           >
-            ×
+            <svg viewBox="0 0 8 8" width="7" height="7">
+              <path d="M1.3 1.3L6.7 6.7M6.7 1.3L1.3 6.7" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+            </svg>
           </button>
           <button
             type="button"
@@ -93,7 +95,9 @@ export function Window({
             onClick={() => onMinimize(win.id)}
             aria-label="Minimize window"
           >
-            −
+            <svg viewBox="0 0 8 8" width="7" height="7">
+              <path d="M1.2 4H6.8" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+            </svg>
           </button>
           <button
             type="button"
@@ -101,7 +105,16 @@ export function Window({
             onClick={() => onToggleZoom(win.id)}
             aria-label="Zoom window"
           >
-            ⤢
+            <svg viewBox="0 0 8 8" width="7" height="7">
+              <path
+                d="M1.3 5.1V6.7H2.9M6.7 2.9V1.3H5.1"
+                stroke="currentColor"
+                strokeWidth="1.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                fill="none"
+              />
+            </svg>
           </button>
         </div>
         <span className="mac-window-title">{win.title}</span>

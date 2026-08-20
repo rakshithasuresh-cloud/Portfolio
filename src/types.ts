@@ -1,5 +1,7 @@
 export type IconKind = 'music' | 'video' | 'document' | 'product' | 'collab';
 
+export type IconShape = 'square' | 'portrait' | 'landscape';
+
 export interface WindowContentData {
   eyebrow: string;
   subtitle: string;
@@ -13,6 +15,7 @@ export interface DesktopIconData {
   id: string;
   label: string;
   kind: IconKind;
+  shape: IconShape;
   glyph: string;
   accent: string;
   accent2: string;

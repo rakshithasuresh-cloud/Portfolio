@@ -1,6 +1,9 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import type { DockAppData, DockAppKind } from '../types';
 import './Dock.css';
+
+const MAX_SCALE = 1.45;
+const FALLOFF = 34; // px — smaller = sharper drop-off between neighbors
 
 const TILE_STYLE: Record<DockAppKind, { background: string; label: string }> = {
   ae: { background: 'linear-gradient(160deg,#b9a9ff 0%,#1a0b57 100%)', label: 'Ae' },
@@ -62,6 +65,33 @@ interface DockProps {
 
 export function Dock({ apps, onLaunch }: DockProps) {
   const [bouncing, setBouncing] = useState<string | null>(null);
+  const dockRef = useRef<HTMLDivElement>(null);
+  const itemRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const dockRect = dockRef.current?.getBoundingClientRect();
+    if (!dockRect) return;
+    const mouseX = e.clientX - dockRect.left;
+    for (const app of apps) {
+      const el = itemRefs.current[app.id];
+      if (!el) continue;
+      // offsetLeft/offsetWidth are layout values, unaffected by the transform
+      // this loop itself applies — so the falloff never feeds back on itself.
+      const center = el.offsetLeft + el.offsetWidth / 2;
+      const distance = Math.abs(mouseX - center);
+      const scale = 1 + (MAX_SCALE - 1) * Math.exp(-(distance * distance) / (2 * FALLOFF * FALLOFF));
+      el.style.setProperty('--scale', scale.toFixed(3));
+      el.style.zIndex = String(Math.round(scale * 100));
+    }
+  };
+
+  const handleMouseLeave = () => {
+    for (const app of apps) {
+      const el = itemRefs.current[app.id];
+      el?.style.setProperty('--scale', '1');
+      if (el) el.style.zIndex = '1';
+    }
+  };
 
   const handleClick = (app: DockAppData) => {
     setBouncing(app.id);
@@ -71,7 +101,7 @@ export function Dock({ apps, onLaunch }: DockProps) {
 
   return (
     <div className="dock-wrap">
-      <div className="dock">
+      <div className="dock" ref={dockRef} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
         {apps.map((app) => {
           const isTrash = app.kind === 'trash';
           const style = TILE_STYLE[app.kind];
@@ -80,6 +110,9 @@ export function Dock({ apps, onLaunch }: DockProps) {
               {isTrash && <div className="dock-divider" />}
               <button
                 type="button"
+                ref={(el) => {
+                  itemRefs.current[app.id] = el;
+                }}
                 className={`dock-item${bouncing === app.id ? ' is-bouncing' : ''}`}
                 onClick={() => handleClick(app)}
                 aria-label={app.label}

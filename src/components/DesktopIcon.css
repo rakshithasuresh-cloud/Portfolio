@@ -20,9 +20,9 @@
 }
 
 .desktop-icon-tile {
-  width: 74px;
-  height: 74px;
-  border-radius: 9px;
+  width: var(--tile-w, 74px);
+  height: var(--tile-h, 74px);
+  border-radius: 2.5px;
   background: linear-gradient(160deg, var(--accent) 0%, var(--accent2) 100%);
   box-shadow: var(--shadow-icon), 0 0 0 1px rgba(0, 0, 0, 0.25), inset 0 0 0 1px rgba(255, 255, 255, 0.12);
   position: relative;

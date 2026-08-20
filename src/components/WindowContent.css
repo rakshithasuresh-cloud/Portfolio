@@ -39,7 +39,7 @@
 .wc-cover {
   width: 100%;
   aspect-ratio: 16 / 9;
-  border-radius: 10px;
+  border-radius: 4px;
   background: linear-gradient(160deg, var(--accent) 0%, var(--accent2) 100%);
   margin-bottom: 26px;
   position: relative;
@@ -103,7 +103,7 @@
 
 .wc-grid-tile {
   aspect-ratio: 1;
-  border-radius: 8px;
+  border-radius: 3px;
   background: linear-gradient(160deg, var(--accent) 0%, var(--accent2) 100%);
   position: relative;
   overflow: hidden;

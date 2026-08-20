@@ -8,6 +8,12 @@ function clamp(value: number, min: number, max: number) {
   return Math.min(max, Math.max(min, value));
 }
 
+const TILE_SIZE: Record<DesktopIconData['shape'], { w: number; h: number }> = {
+  square: { w: 74, h: 74 },
+  portrait: { w: 62, h: 86 },
+  landscape: { w: 94, h: 62 },
+};
+
 interface DesktopIconProps {
   data: DesktopIconData;
   containerRef: RefObject<HTMLDivElement | null>;
@@ -36,11 +42,14 @@ export function DesktopIcon({ data, containerRef, onOpen }: DesktopIconProps) {
     },
   });
 
+  const size = TILE_SIZE[data.shape];
   const style = {
     left: `${pos.x}%`,
     top: `${pos.y}%`,
     '--accent': data.accent,
     '--accent2': data.accent2,
+    '--tile-w': `${size.w}px`,
+    '--tile-h': `${size.h}px`,
   } as CSSProperties;
 
   return (
