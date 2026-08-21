@@ -15,7 +15,7 @@ import type { DesktopIconData, DockAppData, WindowState } from './types';
 const DEFAULT_W = 560;
 const DEFAULT_H = 480;
 const OWNER_NAME = 'Rakshitha Suresh';
-const OWNER_EMAIL = 'vsrakshitha1864@gmail.com';
+const OWNER_EMAIL = 'rakswork7@gmail.com';
 
 function clamp(value: number, min: number, max: number) {
   return Math.min(max, Math.max(min, value));
