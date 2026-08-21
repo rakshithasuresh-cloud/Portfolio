@@ -85,9 +85,9 @@
   filter: brightness(1.06);
   box-shadow: 0 16px 26px -8px rgba(0, 0, 0, 0.55), 0 0 0 2px rgba(0, 0, 0, 0.4),
     inset 0 0 0 1px rgba(255, 255, 255, 0.2);
-  /* transparent picture-frame ring, held off the edge of the image */
-  outline: 6px solid rgba(255, 255, 255, 0.55);
-  outline-offset: 4px;
+  /* solid picture-mat frame, snug against the image like a real photo mount */
+  outline: 12px solid rgba(214, 213, 202, 0.95);
+  outline-offset: 0;
 }
 
 .desktop-icon:hover .desktop-icon-label {
