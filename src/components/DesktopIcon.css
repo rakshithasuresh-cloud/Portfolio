@@ -24,14 +24,14 @@
   height: var(--tile-h, 74px);
   border-radius: 1.5px;
   background: linear-gradient(160deg, var(--accent) 0%, var(--accent2) 100%);
-  box-shadow: var(--shadow-icon), inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
   position: relative;
   overflow: hidden;
   transition: transform 0.16s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.16s ease, filter 0.16s ease;
 }
 
 /* rounded corners for the widget-sized icon, matched to its wider aspect.
-   disco is the only widget tile, and it keeps its outline at all times. */
+   disco is the only widget tile, and it keeps its outline + shadow at all times. */
 .desktop-icon-tile-widget {
   border-radius: 18px;
   box-shadow: var(--shadow-icon), 0 0 0 2px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.12);
