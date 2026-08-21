@@ -87,9 +87,9 @@
   transform: translateY(-3px) scale(1.06);
   filter: brightness(1.06);
   box-shadow: 0 16px 26px -8px rgba(0, 0, 0, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
-  /* transparent picture frame — just a thin white line held off the image */
+  /* transparent picture frame — a thin white line held well off the image */
   outline-color: rgba(255, 255, 255, 0.85);
-  outline-offset: 5px;
+  outline-offset: 12px;
 }
 
 /* disco's permanent dark ring would otherwise be replaced by the hover
@@ -103,7 +103,7 @@
   background-color: var(--link-blue);
   color: #fff;
   /* nudged down so the grown, framed tile above never covers the label */
-  transform: translateY(6px);
+  transform: translateY(12px);
 }
 
 .desktop-icon:active .desktop-icon-tile {
