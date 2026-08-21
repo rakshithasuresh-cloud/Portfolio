@@ -49,9 +49,13 @@
   will-change: transform;
 }
 
-/* trash sits heavier/lower than the rest, like it's resting on the shelf */
+/* trash sits heavier/lower than the rest, like it's resting on the shelf.
+   the warning triangle's art has ~7px of built-in breathing room inside
+   its own box, which otherwise inflates the visible gap on this side of
+   the divider well past the other dividers - pull trash in to compensate. */
 .dock-item-anchor-bottom {
   align-self: flex-end;
+  margin-left: -13px;
 }
 
 .dock-item:focus-visible {
@@ -127,9 +131,13 @@
   transform: translateY(0px);
 }
 
+/* trash.png is 174x214 (not square) - sizing the box to match its real
+   aspect ratio instead of forcing a square avoids object-fit letterboxing,
+   which was insetting the visible bin further than its neighbors and
+   making the divider gap next to it read as wider than the others */
 .dock-tile-img-frameless-trash {
-  width: 52px;
-  height: 52px;
+  width: 44px;
+  height: 54px;
 }
 
 .dock-dot {

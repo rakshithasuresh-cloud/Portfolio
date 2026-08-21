@@ -81,8 +81,8 @@ export const desktopIcons: DesktopIconData[] = [
     image: photostripImg,
     notOpenable: true,
     hideLabel: true,
-    x: 61,
-    y: 28,
+    x: 56,
+    y: 23,
     content: {
       eyebrow: 'Single · Artwork',
       subtitle: 'Add a release date or credit line here.',
@@ -163,8 +163,8 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#e85fa8',
     accent2: '#9b2f6d',
     image: discoImg,
-    x: 55,
-    y: 69,
+    x: 58,
+    y: 73,
     content: {
       eyebrow: 'Single · Cover Art',
       subtitle: 'Add a release date or credit line here.',
