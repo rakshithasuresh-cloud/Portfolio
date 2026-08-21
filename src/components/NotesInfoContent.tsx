@@ -25,7 +25,7 @@ const SECTIONS: InfoSection[] = [
       'Marketer, Social Media Strategist, Art Director, Graphic Designer, Digital Artist, Photographer, even a Stylist sometimes and much more. To put it simply, I bring ideas to life through visuals and manage everything that makes a project come together in the end.',
     listLabel: 'I can do…',
     items: [
-      'Marketing Research',
+      'Marketing Research and Strategy',
       'Social Media Content',
       'Creative Direction',
       'Artwork (posters, merch, illustrations)',
