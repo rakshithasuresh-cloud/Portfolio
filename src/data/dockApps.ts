@@ -11,7 +11,7 @@ export const dockApps: DockAppData[] = [
     kind: 'instagram',
     href: 'https://www.instagram.com/moonpie_1478?igsh=MWR2MDdrbnE2NWl6dA==',
   },
-  { id: 'mail', label: 'Mail', kind: 'mail' },
+  { id: 'mail', label: 'Mail', kind: 'mail', href: 'mailto:rakswork7@gmail.com' },
   { id: 'error', label: 'Error', kind: 'error' },
   { id: 'trash', label: 'Bin of Ideas', kind: 'trash' },
 ];
