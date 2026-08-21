@@ -1,28 +1,75 @@
 import { useState } from 'react';
 import './NotesInfoContent.css';
 
+interface InfoGroup {
+  label: string;
+  items: string[];
+}
+
 interface InfoSection {
   id: string;
   label: string;
   count: string;
-  paragraph: string;
-  items: string[];
+  paragraph?: string;
+  listLabel?: string;
+  items?: string[];
+  groups?: InfoGroup[];
 }
 
 const SECTIONS: InfoSection[] = [
   {
     id: 'about',
     label: 'About me',
-    count: '18',
-    paragraph: 'Add your bio here.',
-    items: ['Add a skill or capability here', 'Add a skill or capability here', 'Add a skill or capability here'],
+    count: '',
+    paragraph:
+      'Marketer, Social Media Strategist, Art Director, Graphic Designer, Digital Artist, Photographer, even a Stylist sometimes and much more. To put it simply, I bring ideas to life through visuals and manage everything that makes a project come together in the end.',
+    listLabel: 'I can do…',
+    items: [
+      'Marketing Research',
+      'Social Media Content',
+      'Creative Direction',
+      'Artwork (posters, merch, illustrations)',
+      'Offline event planning and visuals',
+      'Photography',
+    ],
   },
   {
     id: 'cv',
     label: 'CV',
-    count: '48',
-    paragraph: 'Add a CV summary here.',
-    items: ['Add an experience or education entry here', 'Add an experience or education entry here'],
+    count: '',
+    groups: [
+      {
+        label: 'Education',
+        items: [
+          'UCL School of Management – MSc Marketing Science (2026–2027)',
+          'Women’s Christian College – BBA, General CGPA: 8.4/10 (2022–2025)',
+        ],
+      },
+      {
+        label: 'Experience',
+        items: [
+          'Kairos Makeup Studio & Spa – Marketing and Strategy Associate (2025–2026)',
+          'Abroad Scholar – Marketing Strategy Intern (2025)',
+          'WOCO Spaces – Marketing Research (2025)',
+          'Audi – Marketing Intern (2024)',
+          'Hobics – Social Media Marketing Intern (2024)',
+          'Aarveem International – Administrative Intern (2023)',
+        ],
+      },
+      {
+        label: 'Part-time Student Employment @ Women’s Christian College (2022–2025)',
+        items: [
+          'Arts Club Coordinator (2023–2025)',
+          'Department Media Manager (2024–2025)',
+          'Social Media Coordinator of National Service Scheme (2024–2025)',
+          'International Conference Coordinator (2025)',
+          'PR Head (2024)',
+          'Design Head for Sports Day (2024)',
+          'Annual College Play Assistant Costume Coordinator (2022)',
+          'Department’s Fashion Parade Representative (2022)',
+        ],
+      },
+    ],
   },
   {
     id: 'interests',
@@ -42,6 +89,19 @@ function CheckIcon() {
   );
 }
 
+function Checklist({ items }: { items: string[] }) {
+  return (
+    <ul className="info-checklist">
+      {items.map((item, i) => (
+        <li key={i} className="info-check-item">
+          <CheckIcon />
+          {item}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export function NotesInfoContent() {
   const [selectedId, setSelectedId] = useState(SECTIONS[0].id);
   const section = SECTIONS.find((s) => s.id === selectedId) ?? SECTIONS[0];
@@ -57,20 +117,25 @@ export function NotesInfoContent() {
             onClick={() => setSelectedId(s.id)}
           >
             <span className="info-sidebar-label">{s.label}</span>
-            <span className="info-sidebar-count">{s.count}</span>
+            {s.count && <span className="info-sidebar-count">{s.count}</span>}
           </button>
         ))}
       </div>
       <div className="info-content">
-        <p className="info-paragraph">{section.paragraph}</p>
-        <ul className="info-checklist">
-          {section.items.map((item, i) => (
-            <li key={i} className="info-check-item">
-              <CheckIcon />
-              {item}
-            </li>
-          ))}
-        </ul>
+        {section.paragraph && <p className="info-paragraph">{section.paragraph}</p>}
+        {section.groups
+          ? section.groups.map((group) => (
+              <div key={group.label} className="info-group">
+                <h3 className="info-group-label">{group.label}</h3>
+                <Checklist items={group.items} />
+              </div>
+            ))
+          : section.items && (
+              <>
+                {section.listLabel && <h3 className="info-group-label">{section.listLabel}</h3>}
+                <Checklist items={section.items} />
+              </>
+            )}
       </div>
     </div>
   );

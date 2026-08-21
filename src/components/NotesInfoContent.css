@@ -43,7 +43,7 @@
 }
 
 .info-sidebar-count {
-  font-size: 12px;
+  font-size: 17px;
   font-weight: 700;
   color: #c47a1f;
   font-variant-numeric: tabular-nums;
@@ -60,6 +60,23 @@
   line-height: 1.65;
   color: rgba(16, 16, 18, 0.85);
   margin: 0 0 20px;
+}
+
+.info-group {
+  margin: 0 0 22px;
+}
+
+.info-group:last-child {
+  margin-bottom: 0;
+}
+
+.info-group-label {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(16, 16, 18, 0.55);
+  margin: 0 0 10px;
 }
 
 .info-checklist {
