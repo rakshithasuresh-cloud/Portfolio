@@ -123,7 +123,7 @@
 .dock-tile-img-frameless-files {
   width: 76px;
   height: 76px;
-  transform: translateY(4px);
+  transform: translateY(1px);
 }
 
 .dock-tile-img-frameless-trash {
