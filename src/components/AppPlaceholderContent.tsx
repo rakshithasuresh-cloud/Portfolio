@@ -2,7 +2,7 @@ import type { DockAppData } from '../types';
 import './WindowContent.css';
 
 const TRASH_COPY = 'Trash is empty.';
-const DEFAULT_COPY = "This app isn't wired up yet — tell me what it should open or do here.";
+const DEFAULT_COPY = "This app isn't wired up yet - tell me what it should open or do here.";
 
 interface AppPlaceholderContentProps {
   app: DockAppData;

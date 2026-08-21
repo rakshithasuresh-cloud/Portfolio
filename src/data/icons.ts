@@ -23,7 +23,7 @@ export const desktopIcons: DesktopIconData[] = [
       eyebrow: 'Single · Cover Art',
       subtitle: 'Add a release date or credit line here.',
       body: [
-        'Placeholder write-up for “Love Song Sad.” Swap this copy for the real story behind the release — direction, concept, and your role on it.',
+        'Placeholder write-up for “Love Song Sad.” Swap this copy for the real story behind the release - direction, concept, and your role on it.',
         'This window supports multiple paragraphs, so feel free to go into as much detail as the project needs.',
       ],
       linkLabel: 'Listen to the track',
@@ -64,7 +64,7 @@ export const desktopIcons: DesktopIconData[] = [
       eyebrow: 'Tour Identity · Case Study',
       subtitle: 'Add tour dates and city list here.',
       body: [
-        'Placeholder case study for the tour’s visual identity — poster system, merch tie-in, and stage design.',
+        'Placeholder case study for the tour’s visual identity - poster system, merch tie-in, and stage design.',
         'Replace with real process shots, sketches, and final outcomes when ready.',
       ],
       showImageGrid: true,
@@ -128,7 +128,7 @@ export const desktopIcons: DesktopIconData[] = [
       eyebrow: 'Product Design · Packaging',
       subtitle: 'Add manufacturing or pressing details here.',
       body: [
-        'Placeholder description for the vinyl packaging design — materials, print finish, and unboxing details.',
+        'Placeholder description for the vinyl packaging design - materials, print finish, and unboxing details.',
       ],
       showImageGrid: true,
       linkLabel: 'Shop the vinyl',
@@ -169,7 +169,7 @@ export const desktopIcons: DesktopIconData[] = [
       eyebrow: 'Single · Cover Art',
       subtitle: 'Add a release date or credit line here.',
       body: [
-        'Placeholder write-up for “Disco Occassionally.” Swap this copy for the real story behind the release — direction, concept, and your role on it.',
+        'Placeholder write-up for “Disco Occassionally.” Swap this copy for the real story behind the release - direction, concept, and your role on it.',
       ],
       linkLabel: 'Listen to the track',
     },
@@ -188,7 +188,7 @@ export const desktopIcons: DesktopIconData[] = [
       eyebrow: 'Collaboration · Campaign',
       subtitle: 'Add partner name and campaign scope here.',
       body: [
-        'Placeholder description of the collaboration — partners involved, campaign goals, and deliverables.',
+        'Placeholder description of the collaboration - partners involved, campaign goals, and deliverables.',
       ],
       showImageGrid: true,
     },
@@ -284,7 +284,7 @@ export const desktopIcons: DesktopIconData[] = [
       eyebrow: 'Product Design · Packaging',
       subtitle: 'Add manufacturing or drop details here.',
       body: [
-        'Placeholder description for the merch drop — materials, print finish, and unboxing details.',
+        'Placeholder description for the merch drop - materials, print finish, and unboxing details.',
       ],
       showImageGrid: true,
       linkLabel: 'Shop the drop',
@@ -304,7 +304,7 @@ export const desktopIcons: DesktopIconData[] = [
       eyebrow: 'Collaboration · Campaign',
       subtitle: 'Add partner name and session scope here.',
       body: [
-        'Placeholder description of the collaboration — partners involved, session goals, and deliverables.',
+        'Placeholder description of the collaboration - partners involved, session goals, and deliverables.',
       ],
       showImageGrid: true,
     },
