@@ -3,16 +3,20 @@ import discoImg from '../assets/desktop/disco.png';
 import atonementImg from '../assets/desktop/atonement.jpg';
 import herImg from '../assets/desktop/her.jpg';
 import photostripImg from '../assets/desktop/photostrip.jpg';
+import figImg from '../assets/desktop/fig.jpg';
+import artImg from '../assets/desktop/art.jpg';
+import weirdImg from '../assets/desktop/weird.jpg';
 
 export const desktopIcons: DesktopIconData[] = [
   {
     id: 'love-song-sad',
-    label: 'Love Song Sad',
+    label: 'Weird',
     kind: 'music',
-    shape: 'square',
+    shape: 'photo',
     glyph: '♫',
     accent: '#8a6b4f',
     accent2: '#5c4636',
+    image: weirdImg,
     x: 24,
     y: 15,
     content: {
@@ -111,12 +115,13 @@ export const desktopIcons: DesktopIconData[] = [
   },
   {
     id: 'mafija-vinyl',
-    label: 'Mafija Vinyl',
+    label: 'Art',
     kind: 'product',
-    shape: 'square',
+    shape: 'photo',
     glyph: '◍',
     accent: '#3c3f6b',
     accent2: '#20223f',
+    image: artImg,
     x: 43,
     y: 48,
     content: {
@@ -131,12 +136,13 @@ export const desktopIcons: DesktopIconData[] = [
   },
   {
     id: 'to-nie-pop',
-    label: 'To Nie Pop',
+    label: 'Fig',
     kind: 'music',
-    shape: 'square',
+    shape: 'photo',
     glyph: '♫',
     accent: '#a23b3b',
     accent2: '#601f1f',
+    image: figImg,
     x: 32,
     y: 47,
     content: {

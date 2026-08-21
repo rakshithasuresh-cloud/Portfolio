@@ -18,11 +18,13 @@ const TILE_SIZE: Record<DesktopIconData['shape'], { w: number; h: number }> = {
   poster: { w: 96, h: 128 },
   // matches the real ~0.337:1 aspect of the photobooth strip
   strip: { w: 80, h: 237 },
+  // near-square illustrated tiles — a touch bigger than the plain color squares
+  photo: { w: 96, h: 96 },
 };
 
 // these ship as full posed images with their own real aspect ratio — scale
 // to fit inside the tile instead of cropping to fill it
-const CONTAIN_SHAPES = new Set<DesktopIconData['shape']>(['poster', 'strip']);
+const CONTAIN_SHAPES = new Set<DesktopIconData['shape']>(['poster', 'strip', 'photo']);
 
 interface DesktopIconProps {
   data: DesktopIconData;

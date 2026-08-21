@@ -1,6 +1,6 @@
 export type IconKind = 'music' | 'video' | 'document' | 'product' | 'collab';
 
-export type IconShape = 'square' | 'portrait' | 'landscape' | 'widget' | 'poster' | 'strip';
+export type IconShape = 'square' | 'portrait' | 'landscape' | 'widget' | 'poster' | 'strip' | 'photo';
 
 export interface WindowContentData {
   eyebrow: string;
