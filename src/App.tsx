@@ -8,6 +8,7 @@ import { WindowContent } from './components/WindowContent';
 import { AppPlaceholderContent } from './components/AppPlaceholderContent';
 import { ErrorDialogContent } from './components/ErrorDialogContent';
 import { NotesInfoContent } from './components/NotesInfoContent';
+import { FilesAppContent } from './components/FilesAppContent';
 import { desktopIcons } from './data/icons';
 import { dockApps } from './data/dockApps';
 import type { DesktopIconData, DockAppData, WindowState } from './types';
@@ -74,8 +75,8 @@ function App() {
       if (existing) {
         return ws.map((w) => (w.id === existing.id ? { ...w, minimized: false, zIndex: nextZ() } : w));
       }
-      const width = app.kind === 'error' ? 440 : app.kind === 'notes' ? 640 : 380;
-      const height = app.kind === 'error' ? 190 : app.kind === 'notes' ? 460 : 220;
+      const width = app.kind === 'error' ? 440 : app.kind === 'notes' || app.kind === 'files' ? 640 : 380;
+      const height = app.kind === 'error' ? 190 : app.kind === 'notes' || app.kind === 'files' ? 460 : 220;
       const rect = computeSpawnRect(null, width, height);
       const title =
         app.kind === 'error'
@@ -173,6 +174,8 @@ function App() {
             <ErrorDialogContent onTryAgain={() => closeWindow(win.id)} />
           ) : win.app?.kind === 'notes' ? (
             <NotesInfoContent />
+          ) : win.app?.kind === 'files' ? (
+            <FilesAppContent onOpenFolder={(folder) => openIconWindow(folder, null)} />
           ) : win.app ? (
             <AppPlaceholderContent app={win.app} />
           ) : null}
