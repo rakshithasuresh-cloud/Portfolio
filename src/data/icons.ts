@@ -18,7 +18,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent2: '#5c4636',
     image: weirdImg,
     x: 24,
-    y: 15,
+    y: 21,
     content: {
       eyebrow: 'Single · Cover Art',
       subtitle: 'Add a release date or credit line here.',
@@ -38,7 +38,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#2b2b2e',
     accent2: '#151517',
     x: 39,
-    y: 20,
+    y: 26,
     content: {
       eyebrow: 'Live Visuals · Motion',
       subtitle: 'Add tour name, venue, or year here.',
@@ -59,7 +59,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent2: '#7a4b52',
     image: atonementImg,
     x: 58,
-    y: 44,
+    y: 50,
     content: {
       eyebrow: 'Tour Identity · Case Study',
       subtitle: 'Add tour dates and city list here.',
@@ -82,7 +82,7 @@ export const desktopIcons: DesktopIconData[] = [
     notOpenable: true,
     hideLabel: true,
     x: 61,
-    y: 22,
+    y: 28,
     content: {
       eyebrow: 'Single · Artwork',
       subtitle: 'Add a release date or credit line here.',
@@ -102,7 +102,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent2: '#8f2f45',
     image: herImg,
     x: 46,
-    y: 30,
+    y: 36,
     content: {
       eyebrow: 'Editorial · Case Study',
       subtitle: 'Add a short one-line description here.',
@@ -123,7 +123,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent2: '#20223f',
     image: artImg,
     x: 43,
-    y: 48,
+    y: 54,
     content: {
       eyebrow: 'Product Design · Packaging',
       subtitle: 'Add manufacturing or pressing details here.',
@@ -144,7 +144,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent2: '#601f1f',
     image: figImg,
     x: 32,
-    y: 47,
+    y: 53,
     content: {
       eyebrow: 'Single · Cover Art',
       subtitle: 'Add a release date or credit line here.',
@@ -164,7 +164,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent2: '#9b2f6d',
     image: discoImg,
     x: 55,
-    y: 63,
+    y: 69,
     content: {
       eyebrow: 'Single · Cover Art',
       subtitle: 'Add a release date or credit line here.',
@@ -183,7 +183,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#d3a23a',
     accent2: '#8c661f',
     x: 72,
-    y: 45,
+    y: 51,
     content: {
       eyebrow: 'Collaboration · Campaign',
       subtitle: 'Add partner name and campaign scope here.',
@@ -202,7 +202,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#405c53',
     accent2: '#22332d',
     x: 78,
-    y: 28,
+    y: 34,
     content: {
       eyebrow: 'EP · Artwork',
       subtitle: 'Add track list or release date here.',
@@ -221,7 +221,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#6b4c8a',
     accent2: '#3d2b52',
     x: 31,
-    y: 22,
+    y: 28,
     content: {
       eyebrow: 'Single · Cover Art',
       subtitle: 'Add a release date or credit line here.',
@@ -240,7 +240,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#8a4c4c',
     accent2: '#522b2b',
     x: 72,
-    y: 31,
+    y: 37,
     content: {
       eyebrow: 'Live Visuals · Motion',
       subtitle: 'Add tour name, venue, or year here.',
@@ -260,7 +260,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#4c6b8a',
     accent2: '#2b3d52',
     x: 75,
-    y: 62,
+    y: 68,
     content: {
       eyebrow: 'Editorial · Case Study',
       subtitle: 'Add a short one-line description here.',
@@ -279,7 +279,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#8a7c4c',
     accent2: '#52472b',
     x: 68,
-    y: 66,
+    y: 72,
     content: {
       eyebrow: 'Product Design · Packaging',
       subtitle: 'Add manufacturing or drop details here.',
@@ -299,7 +299,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#4c8a6b',
     accent2: '#2b523d',
     x: 31,
-    y: 66,
+    y: 72,
     content: {
       eyebrow: 'Collaboration · Campaign',
       subtitle: 'Add partner name and session scope here.',
@@ -318,7 +318,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#8a4c6b',
     accent2: '#522b3d',
     x: 39,
-    y: 64,
+    y: 70,
     content: {
       eyebrow: 'EP · Artwork',
       subtitle: 'Add track list or release date here.',
