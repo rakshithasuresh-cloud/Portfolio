@@ -89,7 +89,7 @@
   box-shadow: 0 16px 26px -8px rgba(0, 0, 0, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
   /* transparent picture frame — a thin white line held well off the image */
   outline-color: rgba(255, 255, 255, 0.85);
-  outline-offset: 12px;
+  outline-offset: 10px;
 }
 
 /* disco's permanent dark ring would otherwise be replaced by the hover

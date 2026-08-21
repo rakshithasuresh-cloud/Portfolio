@@ -31,6 +31,14 @@
   background: rgba(255, 255, 255, 0.18);
 }
 
+/* trash is pulled left (see .dock-item-anchor-bottom) to close the visual
+   gap inflated by the warning triangle's built-in padding - shift this
+   divider left by half that so it stays centered between the two icons
+   instead of drifting toward trash */
+.dock-divider-pre-trash {
+  transform: translateX(-7px);
+}
+
 .dock-item {
   position: relative;
   display: flex;

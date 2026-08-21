@@ -123,7 +123,9 @@ export function Dock({ apps, onLaunch }: DockProps) {
 
           return (
             <div key={app.id} style={{ display: 'contents' }}>
-              {DIVIDER_BEFORE[app.kind] && <div className="dock-divider" />}
+              {DIVIDER_BEFORE[app.kind] && (
+                <div className={`dock-divider${isTrash ? ' dock-divider-pre-trash' : ''}`} />
+              )}
               {app.href ? (
                 <a
                   ref={(el) => {
