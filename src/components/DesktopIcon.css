@@ -87,8 +87,8 @@
   transform: translateY(-3px) scale(1.06);
   filter: brightness(1.06);
   box-shadow: 0 16px 26px -8px rgba(0, 0, 0, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
-  /* transparent picture frame — a thin, faintly black-tinted white line held well off the image */
-  outline-color: rgba(200, 198, 192, 0.85);
+  /* transparent picture frame — a thin white line held well off the image */
+  outline-color: rgba(255, 255, 255, 0.85);
   outline-offset: 12px;
 }
 
