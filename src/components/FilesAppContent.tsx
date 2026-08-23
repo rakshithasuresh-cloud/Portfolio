@@ -29,8 +29,9 @@ export function FilesAppContent({ onOpenFolder }: FilesAppContentProps) {
       </div>
       <div className="files-content">
         <h2 className="files-content-title">{section.label}</h2>
+        {section.subtitle && <p className="files-content-subtitle">{section.subtitle}</p>}
         <div className="files-grid">
-          {section.folders.map((folder) => (
+          {section.folders?.map((folder) => (
             <button
               key={folder.id}
               type="button"
@@ -40,6 +41,11 @@ export function FilesAppContent({ onOpenFolder }: FilesAppContentProps) {
               <img src={filesImg} alt="" className="files-folder-icon" />
               <span className="files-folder-label">{folder.label}</span>
             </button>
+          ))}
+          {section.tools?.map((tool) => (
+            <div key={tool.id} className="files-tool">
+              <img src={tool.image} alt="" className="files-tool-icon" />
+            </div>
           ))}
         </div>
       </div>

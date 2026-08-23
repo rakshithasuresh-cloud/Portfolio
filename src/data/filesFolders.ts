@@ -1,9 +1,22 @@
 import type { DesktopIconData } from '../types';
+import tool1 from '../assets/tools/tool1.png';
+import tool2 from '../assets/tools/tool2.png';
+import tool3 from '../assets/tools/tool3.png';
+import tool4 from '../assets/tools/tool4.png';
+import tool5 from '../assets/tools/tool5.png';
+import tool6 from '../assets/tools/tool6.png';
+
+export interface FilesTool {
+  id: string;
+  image: string;
+}
 
 export interface FilesSection {
   id: string;
   label: string;
-  folders: DesktopIconData[];
+  folders?: DesktopIconData[];
+  subtitle?: string;
+  tools?: FilesTool[];
 }
 
 function makeFolder(id: string, label: string): DesktopIconData {
@@ -47,10 +60,14 @@ export const filesSections: FilesSection[] = [
   {
     id: 'program-files',
     label: 'Program Files',
-    folders: [
-      makeFolder('program-files-folder-1', 'Folder 1'),
-      makeFolder('program-files-folder-2', 'Folder 2'),
-      makeFolder('program-files-folder-3', 'Folder 3'),
+    subtitle: 'Tools I use for creating',
+    tools: [
+      { id: 'tool-1', image: tool1 },
+      { id: 'tool-2', image: tool2 },
+      { id: 'tool-3', image: tool3 },
+      { id: 'tool-4', image: tool4 },
+      { id: 'tool-5', image: tool5 },
+      { id: 'tool-6', image: tool6 },
     ],
   },
 ];
