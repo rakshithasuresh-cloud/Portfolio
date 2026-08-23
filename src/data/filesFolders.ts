@@ -41,7 +41,7 @@ function makeFolder(id: string, label: string): DesktopIconData {
 export const filesSections: FilesSection[] = [
   {
     id: 'documents',
-    label: 'Documents',
+    label: 'Marketing',
     folders: [
       makeFolder('documents-folder-1', 'Folder 1'),
       makeFolder('documents-folder-2', 'Folder 2'),
@@ -50,11 +50,20 @@ export const filesSections: FilesSection[] = [
   },
   {
     id: 'research',
-    label: 'Research',
+    label: 'Data Analysis',
     folders: [
       makeFolder('research-folder-1', 'Folder 1'),
       makeFolder('research-folder-2', 'Folder 2'),
       makeFolder('research-folder-3', 'Folder 3'),
+    ],
+  },
+  {
+    id: 'undergraduate',
+    label: 'Undergraduate',
+    folders: [
+      makeFolder('undergraduate-folder-1', 'Folder 1'),
+      makeFolder('undergraduate-folder-2', 'Folder 2'),
+      makeFolder('undergraduate-folder-3', 'Folder 3'),
     ],
   },
   {
