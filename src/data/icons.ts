@@ -28,13 +28,12 @@ export const desktopIcons: DesktopIconData[] = [
     x: 29,
     y: 26,
     content: {
-      eyebrow: 'Single · Cover Art',
-      subtitle: 'Add a release date or credit line here.',
+      eyebrow: 'Illustration',
+      subtitle: 'Creative Process',
       body: [
-        'Placeholder write-up for “Love Song Sad.” Swap this copy for the real story behind the release - direction, concept, and your role on it.',
-        'This window supports multiple paragraphs, so feel free to go into as much detail as the project needs.',
+        'This illustration explores the contrast between individuality and social acceptance. It is inspired by the idea that what is now considered acceptable as whimsical was once simply considered weird.',
+        'The illustration also carries another interpretation. We often judge others for openly embracing the things we ourselves love but choose to hide in order to fit into society. It explores the tension between wanting to express who we truly are and the fear of being perceived as strange for doing so.',
       ],
-      linkLabel: 'Listen to the track',
     },
   },
   {
