@@ -25,8 +25,8 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#8a6b4f',
     accent2: '#5c4636',
     image: weirdImg,
-    x: 29,
-    y: 26,
+    x: 30,
+    y: 27,
     content: {
       eyebrow: 'Illustration',
       subtitle: 'Creative Process',
@@ -45,7 +45,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#2b2b2e',
     accent2: '#151517',
     x: 40,
-    y: 22,
+    y: 23,
     content: {
       eyebrow: 'Live Visuals · Motion',
       subtitle: 'Add tour name, venue, or year here.',
@@ -66,7 +66,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent2: '#7a4b52',
     image: atonementImg,
     x: 55,
-    y: 67,
+    y: 66,
     content: {
       eyebrow: 'Graphic Design',
       subtitle: 'Creative Process',
@@ -91,7 +91,7 @@ export const desktopIcons: DesktopIconData[] = [
     image: photostripImg,
     notOpenable: true,
     hideLabel: true,
-    x: 25,
+    x: 26,
     y: 45,
     content: {
       eyebrow: 'Single · Artwork',
@@ -112,7 +112,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent2: '#8f2f45',
     image: herImg,
     x: 44,
-    y: 34,
+    y: 35,
     content: {
       eyebrow: 'Graphic Design',
       subtitle: 'Creative Process',
@@ -156,7 +156,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#a23b3b',
     accent2: '#601f1f',
     image: figImg,
-    x: 33,
+    x: 34,
     y: 41,
     content: {
       eyebrow: 'Illustration',
@@ -176,7 +176,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#e85fa8',
     accent2: '#9b2f6d',
     image: discoMainImg,
-    x: 70,
+    x: 69,
     y: 51,
     content: {
       eyebrow: 'Graphic Design, Marketing Strategy, Event Planning',
@@ -226,8 +226,8 @@ export const desktopIcons: DesktopIconData[] = [
     glyph: '✧',
     accent: '#d3a23a',
     accent2: '#8c661f',
-    x: 65,
-    y: 68,
+    x: 64,
+    y: 67,
     content: {
       eyebrow: 'Collaboration · Campaign',
       subtitle: 'Add partner name and campaign scope here.',
@@ -246,7 +246,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#405c53',
     accent2: '#22332d',
     x: 54,
-    y: 27,
+    y: 28,
     content: {
       eyebrow: 'EP · Artwork',
       subtitle: 'Add track list or release date here.',
@@ -264,7 +264,7 @@ export const desktopIcons: DesktopIconData[] = [
     glyph: '♪',
     accent: '#6b4c8a',
     accent2: '#3d2b52',
-    x: 63,
+    x: 62,
     y: 37,
     content: {
       eyebrow: 'Single · Cover Art',
@@ -283,8 +283,8 @@ export const desktopIcons: DesktopIconData[] = [
     glyph: '▶',
     accent: '#8a4c4c',
     accent2: '#522b2b',
-    x: 69,
-    y: 25,
+    x: 68,
+    y: 26,
     content: {
       eyebrow: 'Live Visuals · Motion',
       subtitle: 'Add tour name, venue, or year here.',
@@ -342,8 +342,8 @@ export const desktopIcons: DesktopIconData[] = [
     glyph: '✧',
     accent: '#4c8a6b',
     accent2: '#2b523d',
-    x: 31,
-    y: 62,
+    x: 32,
+    y: 61,
     content: {
       eyebrow: 'Collaboration · Campaign',
       subtitle: 'Add partner name and session scope here.',
@@ -362,7 +362,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#8a4c6b',
     accent2: '#522b3d',
     x: 42,
-    y: 68,
+    y: 67,
     content: {
       eyebrow: 'EP · Artwork',
       subtitle: 'Add track list or release date here.',

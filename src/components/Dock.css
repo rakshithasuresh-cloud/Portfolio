@@ -66,16 +66,22 @@
   margin-left: -13px;
 }
 
+/* pull error in a bit closer to photos, the pair on either side of it
+   otherwise reads with more air than the rest of the dock's spacing. */
+.dock-item-tight-left {
+  margin-left: -6px;
+}
+
 .dock-item:focus-visible {
   outline: 2px solid rgba(255, 255, 255, 0.7);
   outline-offset: 4px;
-  border-radius: 13px;
+  border-radius: 10px;
 }
 
 .dock-tile {
   width: 52px;
   height: 52px;
-  border-radius: 13px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
