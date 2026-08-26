@@ -15,16 +15,18 @@ export function FilesAppContent({ onOpenFolder }: FilesAppContentProps) {
   return (
     <div className="files-app">
       <div className="files-sidebar">
-        <span className="files-sidebar-item-dummy">Recent</span>
+        <span className="files-sidebar-item-dummy">Recent Projects</span>
         {filesSections.map((s) => (
-          <button
-            key={s.id}
-            type="button"
-            className={`files-sidebar-item${s.id === selectedId ? ' is-selected' : ''}`}
-            onClick={() => setSelectedId(s.id)}
-          >
-            {s.label}
-          </button>
+          <div key={s.id} style={{ display: 'contents' }}>
+            {s.id === 'program-files' && <div className="files-sidebar-divider" />}
+            <button
+              type="button"
+              className={`files-sidebar-item${s.id === selectedId ? ' is-selected' : ''}`}
+              onClick={() => setSelectedId(s.id)}
+            >
+              {s.label}
+            </button>
+          </div>
         ))}
       </div>
       <div className="files-content">
