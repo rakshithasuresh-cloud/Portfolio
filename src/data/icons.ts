@@ -192,6 +192,7 @@ export const desktopIcons: DesktopIconData[] = [
             'This encourages fans to visit multiple locations and share their discoveries online, collectively piecing together fragments of the album before its release.',
           ],
         },
+        { heading: 'Mock up', image: discoMockupImg },
         {
           heading: 'The Disco Map',
           image: discoMapImg,
@@ -211,7 +212,6 @@ export const desktopIcons: DesktopIconData[] = [
           ],
         },
       ],
-      closingImage: discoMockupImg,
     },
   },
   {
