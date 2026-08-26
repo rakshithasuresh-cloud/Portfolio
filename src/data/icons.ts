@@ -183,6 +183,7 @@ export const desktopIcons: DesktopIconData[] = [
         'The unpredictability becomes a central part of the campaign, encouraging fans to follow clues, share discoveries and speculate about where the experience will appear next. This helps to build strong bonds between the fans and the artist, serving into the tagline “We belong together.”',
       ],
       sections: [
+        { heading: 'Mock up', image: discoMockupImg },
         {
           heading: 'The Telephone Booths',
           image: discoBoothImg,
@@ -192,7 +193,6 @@ export const desktopIcons: DesktopIconData[] = [
             'This encourages fans to visit multiple locations and share their discoveries online, collectively piecing together fragments of the album before its release.',
           ],
         },
-        { heading: 'Mock up', image: discoMockupImg },
         {
           heading: 'The Disco Map',
           image: discoMapImg,
