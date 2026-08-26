@@ -47,6 +47,14 @@
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 10px 24px -14px rgba(0, 0, 0, 0.5);
 }
 
+/* real cover images set their own height from their intrinsic ratio instead
+   of being forced into the 16:9 placeholder box - any hardcoded ratio here
+   would drift slightly from the actual file and leave a sliver of the
+   gradient background visible along one axis */
+.wc-cover-has-image {
+  aspect-ratio: auto;
+}
+
 .wc-cover::before {
   content: '';
   position: absolute;
@@ -67,10 +75,9 @@
 .wc-cover-img {
   position: relative;
   z-index: 1;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
   display: block;
+  width: 100%;
+  height: auto;
   pointer-events: none;
   -webkit-user-drag: none;
 }

@@ -6,15 +6,6 @@ interface WindowContentProps {
   icon: DesktopIconData;
 }
 
-// matches each shape's real image proportions (see TILE_SIZE in DesktopIcon.tsx)
-// so the cover box fits the actual picture instead of a fixed placeholder ratio
-const COVER_ASPECT: Partial<Record<DesktopIconData['shape'], number>> = {
-  photo: 96 / 96,
-  poster: 96 / 128,
-  strip: 80 / 237,
-  widget: 216 / 104,
-};
-
 export function WindowContent({ icon }: WindowContentProps) {
   const { content } = icon;
   const style = {
@@ -22,7 +13,6 @@ export function WindowContent({ icon }: WindowContentProps) {
     '--accent2': icon.accent2,
     '--dot': icon.accent,
   } as CSSProperties;
-  const coverStyle = icon.image ? { aspectRatio: COVER_ASPECT[icon.shape] ?? 16 / 9 } : undefined;
 
   return (
     <div className="wc" style={style}>
@@ -33,7 +23,7 @@ export function WindowContent({ icon }: WindowContentProps) {
       <h1 className="wc-title">{icon.label}</h1>
       <p className="wc-subtitle">{content.subtitle}</p>
 
-      <div className="wc-cover" style={coverStyle}>
+      <div className={`wc-cover${icon.image ? ' wc-cover-has-image' : ''}`}>
         {icon.image ? (
           <img src={icon.image} alt="" className="wc-cover-img" />
         ) : (
