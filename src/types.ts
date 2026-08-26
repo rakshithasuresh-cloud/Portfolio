@@ -15,6 +15,8 @@ export interface WindowContentData {
   showImageGrid?: boolean;
   showVideo?: boolean;
   linkLabel?: string;
+  /** When set, the link button opens this URL in a new tab instead of doing nothing. */
+  linkHref?: string;
   /** Extra case-study blocks (image + heading + copy) rendered inside the Preview section, in order. */
   sections?: WindowContentSection[];
   /** A final image shown after all sections, inside the Preview section. */

@@ -98,11 +98,16 @@ export function WindowContent({ icon }: WindowContentProps) {
 
           {content.closingImage && <img src={content.closingImage} alt="" className="wc-preview-img wc-preview-img-closing" />}
 
-          {content.linkLabel && (
-            <a className="wc-link" href="#" onClick={(e) => e.preventDefault()}>
-              {content.linkLabel} →
-            </a>
-          )}
+          {content.linkLabel &&
+            (content.linkHref ? (
+              <a className="wc-link" href={content.linkHref} target="_blank" rel="noopener noreferrer">
+                {content.linkLabel} →
+              </a>
+            ) : (
+              <a className="wc-link" href="#" onClick={(e) => e.preventDefault()}>
+                {content.linkLabel} →
+              </a>
+            ))}
         </div>
       )}
     </div>

@@ -139,13 +139,13 @@ export const desktopIcons: DesktopIconData[] = [
     x: 38,
     y: 53,
     content: {
-      eyebrow: 'Product Design · Packaging',
-      subtitle: 'Add manufacturing or pressing details here.',
+      eyebrow: 'Illustration',
+      subtitle: 'Creative Process',
       body: [
-        'Placeholder description for the vinyl packaging design - materials, print finish, and unboxing details.',
+        'This drawing was made as motivation for other artists to keep making art even if it is imperfect, especially in this age of AI.',
       ],
-      showImageGrid: true,
-      linkLabel: 'Shop the vinyl',
+      linkLabel: 'View post',
+      linkHref: 'https://www.instagram.com/p/DbkrSejBSJH/?igsi=MXZ0bm1nYmV4bWV1MA==',
     },
   },
   {
