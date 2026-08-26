@@ -5,6 +5,8 @@ import discoBoothImg from '../assets/desktop/disco-booth.jpg';
 import discoMapImg from '../assets/desktop/disco-map.jpg';
 import discoPolishImg from '../assets/desktop/disco-polish.jpg';
 import atonementImg from '../assets/desktop/atonement.jpg';
+import atonementMockupImg from '../assets/desktop/atonement-mockup.jpg';
+import atonementRawImg from '../assets/desktop/atonement-raw.jpg';
 import herImg from '../assets/desktop/her.jpg';
 import photostripImg from '../assets/desktop/photostrip.jpg';
 import figImg from '../assets/desktop/fig.jpg';
@@ -65,13 +67,16 @@ export const desktopIcons: DesktopIconData[] = [
     x: 55,
     y: 67,
     content: {
-      eyebrow: 'Tour Identity · Case Study',
-      subtitle: 'Add tour dates and city list here.',
+      eyebrow: 'Graphic Design',
+      subtitle: 'Creative Process',
       body: [
-        'Placeholder case study for the tour’s visual identity - poster system, merch tie-in, and stage design.',
-        'Replace with real process shots, sketches, and final outcomes when ready.',
+        'I designed this poster to reflect both the setting and emotional atmosphere of Atonement. The paper doilies reference the tea scene between the main characters. The deep green background references the film’s natural settings and visual palette, while also connecting to Robbie’s military uniform and Cecilia’s iconic green dress. Purple and pink tones represent melancholy, yearning and love, while the yellow highlights represent a sense of hope.',
+        'Finally, I chose a dramatic cursive typeface to evoke the film’s 1930s setting and its connection to storytelling, particularly through Briony, whose role as a writer shapes the narrative. Together, these elements create a visual representation of the film’s themes.',
       ],
-      showImageGrid: true,
+      sections: [
+        { heading: 'Mockup', image: atonementMockupImg },
+        { heading: 'Raw Image', image: atonementRawImg },
+      ],
     },
   },
   {

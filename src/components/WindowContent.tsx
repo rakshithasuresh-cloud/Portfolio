@@ -88,7 +88,7 @@ export function WindowContent({ icon }: WindowContentProps) {
             <div className="wc-case-section" key={i}>
               {section.image && <img src={section.image} alt="" className="wc-preview-img" />}
               <h2 className="wc-case-heading">{section.heading}</h2>
-              {section.body.map((paragraph, j) => (
+              {section.body?.map((paragraph, j) => (
                 <p key={j} className="wc-case-text">
                   {paragraph}
                 </p>

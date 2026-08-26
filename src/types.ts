@@ -4,7 +4,7 @@ export type IconShape = 'square' | 'portrait' | 'landscape' | 'widget' | 'poster
 
 export interface WindowContentSection {
   heading: string;
-  body: string[];
+  body?: string[];
   image?: string;
 }
 
