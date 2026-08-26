@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react';
+import { useState, type CSSProperties } from 'react';
 import type { DesktopIconData } from '../types';
 import './WindowContent.css';
 
@@ -6,8 +6,18 @@ interface WindowContentProps {
   icon: DesktopIconData;
 }
 
+function Chevron({ open }: { open: boolean }) {
+  return (
+    <svg viewBox="0 0 10 10" className={`wc-chevron${open ? ' is-open' : ''}`}>
+      <path d="M2 3.5 L5 6.5 L8 3.5" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export function WindowContent({ icon }: WindowContentProps) {
   const { content } = icon;
+  const [detailsOpen, setDetailsOpen] = useState(true);
+  const [previewOpen, setPreviewOpen] = useState(true);
   const style = {
     '--accent': icon.accent,
     '--accent2': icon.accent2,
@@ -16,54 +26,70 @@ export function WindowContent({ icon }: WindowContentProps) {
 
   return (
     <div className="wc" style={style}>
-      <div className="wc-eyebrow">
-        <span className="wc-eyebrow-dot" />
-        {content.eyebrow}
-      </div>
-      <h1 className="wc-title">{icon.label}</h1>
-      <p className="wc-subtitle">{content.subtitle}</p>
-
-      <div className={`wc-cover${icon.image ? ' wc-cover-has-image' : ''}`}>
-        {icon.image ? (
-          <img src={icon.image} alt="" className="wc-cover-img" />
-        ) : (
-          <>
-            <span className="wc-cover-glyph">{icon.glyph}</span>
-            <span className="wc-cover-tag">Placeholder cover</span>
-          </>
-        )}
+      <div className="wc-info-header">
+        <div className="wc-info-thumb">
+          {icon.image ? <img src={icon.image} alt="" className="wc-info-thumb-img" /> : <span>{icon.glyph}</span>}
+        </div>
+        <div className="wc-info-heading">
+          <h1 className="wc-info-title">{icon.label}</h1>
+          <p className="wc-info-subtitle">{content.subtitle}</p>
+        </div>
       </div>
 
-      <div className="wc-body">
+      <div className="wc-description">
         {content.body.map((paragraph, i) => (
           <p key={i}>{paragraph}</p>
         ))}
       </div>
 
-      {content.showImageGrid && (
-        <div className="wc-grid">
-          {[0, 1, 2].map((i) => (
-            <div className="wc-grid-tile" key={i}>
-              <span className="wc-grid-tile-mark">{icon.glyph}</span>
+      <button type="button" className="wc-section-header" onClick={() => setDetailsOpen((v) => !v)}>
+        <Chevron open={detailsOpen} />
+        Details:
+      </button>
+      {detailsOpen && (
+        <div className="wc-section-body">
+          <div className="wc-detail-row">
+            <span className="wc-detail-label">Type:</span> {content.eyebrow}
+          </div>
+        </div>
+      )}
+
+      <button type="button" className="wc-section-header" onClick={() => setPreviewOpen((v) => !v)}>
+        <Chevron open={previewOpen} />
+        Preview:
+      </button>
+      {previewOpen && (
+        <div className="wc-section-body wc-preview-body">
+          {icon.image && <img src={icon.image} alt="" className="wc-preview-img" />}
+
+          {content.showImageGrid && (
+            <div className="wc-grid">
+              {[0, 1, 2].map((i) => (
+                <div className="wc-grid-tile" key={i}>
+                  <span className="wc-grid-tile-mark">{icon.glyph}</span>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      )}
+          )}
 
-      {content.showVideo && (
-        <div className="wc-video">
-          <span className="wc-play">▶</span>
-        </div>
-      )}
+          {content.showVideo && (
+            <div className="wc-video">
+              <span className="wc-play">▶</span>
+            </div>
+          )}
 
-      {content.linkLabel && (
-        <a
-          className="wc-link"
-          href="#"
-          onClick={(e) => e.preventDefault()}
-        >
-          {content.linkLabel} →
-        </a>
+          {!icon.image && !content.showImageGrid && !content.showVideo && (
+            <div className="wc-preview-placeholder">
+              <span>{icon.glyph}</span>
+            </div>
+          )}
+
+          {content.linkLabel && (
+            <a className="wc-link" href="#" onClick={(e) => e.preventDefault()}>
+              {content.linkLabel} →
+            </a>
+          )}
+        </div>
       )}
     </div>
   );

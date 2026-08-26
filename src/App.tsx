@@ -57,7 +57,7 @@ function App() {
       const win: WindowState = {
         id: `icon-${icon.id}-${Date.now()}`,
         iconId: icon.id,
-        title: icon.label,
+        title: `Information about: ${icon.label}`,
         ...rect,
         zIndex: nextZ(),
         minimized: false,

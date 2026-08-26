@@ -170,9 +170,9 @@
   transform: translateX(-50%);
   background: rgba(30, 30, 32, 0.92);
   color: #fff;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
-  padding: 5px 10px;
+  padding: 4px 8px;
   border-radius: 6px;
   white-space: nowrap;
   opacity: 0;
