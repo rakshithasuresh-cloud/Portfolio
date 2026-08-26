@@ -205,6 +205,20 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
+.wc-photo-tile {
+  aspect-ratio: 1;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.wc-photo-tile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .wc-video {
   width: 100%;
   aspect-ratio: 16 / 9;
