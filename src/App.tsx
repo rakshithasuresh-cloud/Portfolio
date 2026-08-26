@@ -9,6 +9,7 @@ import { AppPlaceholderContent } from './components/AppPlaceholderContent';
 import { ErrorDialogContent } from './components/ErrorDialogContent';
 import { NotesInfoContent } from './components/NotesInfoContent';
 import { FilesAppContent } from './components/FilesAppContent';
+import { PhotosAppContent } from './components/PhotosAppContent';
 import { desktopIcons } from './data/icons';
 import { dockApps } from './data/dockApps';
 import type { DesktopIconData, DockAppData, WindowState } from './types';
@@ -75,15 +76,17 @@ function App() {
       if (existing) {
         return ws.map((w) => (w.id === existing.id ? { ...w, minimized: false, zIndex: nextZ() } : w));
       }
-      const width = app.kind === 'error' ? 440 : app.kind === 'notes' || app.kind === 'files' ? 640 : 380;
-      const height = app.kind === 'error' ? 190 : app.kind === 'notes' || app.kind === 'files' ? 460 : 220;
+      const width = app.kind === 'error' ? 440 : app.kind === 'notes' || app.kind === 'files' || app.kind === 'photos' ? 640 : 380;
+      const height = app.kind === 'error' ? 190 : app.kind === 'notes' || app.kind === 'files' || app.kind === 'photos' ? 460 : 220;
       const rect = computeSpawnRect(null, width, height);
       const title =
         app.kind === 'error'
           ? 'Adobe Error'
           : app.kind === 'notes'
             ? `Information about: ${OWNER_NAME}, ${OWNER_EMAIL}`
-            : app.label;
+            : app.kind === 'photos'
+              ? `Information about: ${app.label}`
+              : app.label;
       const win: WindowState = {
         id: `${key}-${Date.now()}`,
         iconId: key,
@@ -176,6 +179,8 @@ function App() {
             <NotesInfoContent />
           ) : win.app?.kind === 'files' ? (
             <FilesAppContent onOpenFolder={(folder) => openIconWindow(folder, null)} />
+          ) : win.app?.kind === 'photos' ? (
+            <PhotosAppContent />
           ) : win.app ? (
             <AppPlaceholderContent app={win.app} />
           ) : null}
