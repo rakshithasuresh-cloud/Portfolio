@@ -74,8 +74,8 @@ export const desktopIcons: DesktopIconData[] = [
         'Finally, I chose a dramatic cursive typeface to evoke the film’s 1930s setting and its connection to storytelling, particularly through Briony, whose role as a writer shapes the narrative. Together, these elements create a visual representation of the film’s themes.',
       ],
       sections: [
-        { heading: 'Mockup', image: atonementMockupImg },
-        { heading: 'Raw Image', image: atonementRawImg },
+        { heading: 'Mock up', image: atonementMockupImg },
+        { heading: 'Raw', image: atonementRawImg },
       ],
     },
   },
