@@ -71,13 +71,6 @@ const SECTIONS: InfoSection[] = [
       },
     ],
   },
-  {
-    id: 'interests',
-    label: 'Interests',
-    count: '∞',
-    paragraph: 'Add a short intro to your interests here.',
-    items: ['Add an interest here', 'Add an interest here', 'Add an interest here'],
-  },
 ];
 
 function CheckIcon() {
