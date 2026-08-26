@@ -84,6 +84,20 @@ export function WindowContent({ icon }: WindowContentProps) {
             </div>
           )}
 
+          {content.sections?.map((section, i) => (
+            <div className="wc-case-section" key={i}>
+              {section.image && <img src={section.image} alt="" className="wc-preview-img" />}
+              <h2 className="wc-case-heading">{section.heading}</h2>
+              {section.body.map((paragraph, j) => (
+                <p key={j} className="wc-case-text">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          ))}
+
+          {content.closingImage && <img src={content.closingImage} alt="" className="wc-preview-img wc-preview-img-closing" />}
+
           {content.linkLabel && (
             <a className="wc-link" href="#" onClick={(e) => e.preventDefault()}>
               {content.linkLabel} →

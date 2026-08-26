@@ -1,5 +1,9 @@
 import type { DesktopIconData } from '../types';
-import discoImg from '../assets/desktop/disco.png';
+import discoMainImg from '../assets/desktop/disco-main.jpg';
+import discoMockupImg from '../assets/desktop/disco-mockup.jpg';
+import discoBoothImg from '../assets/desktop/disco-booth.jpg';
+import discoMapImg from '../assets/desktop/disco-map.jpg';
+import discoPolishImg from '../assets/desktop/disco-polish.jpg';
 import atonementImg from '../assets/desktop/atonement.jpg';
 import herImg from '../assets/desktop/her.jpg';
 import photostripImg from '../assets/desktop/photostrip.jpg';
@@ -156,22 +160,53 @@ export const desktopIcons: DesktopIconData[] = [
   },
   {
     id: 'disco',
-    label: 'Disco',
+    label: 'Disco Occassionally',
     kind: 'product',
-    shape: 'widget',
+    shape: 'poster',
     glyph: '♫',
     accent: '#e85fa8',
     accent2: '#9b2f6d',
-    image: discoImg,
+    image: discoMainImg,
     x: 70,
     y: 51,
     content: {
-      eyebrow: 'Single · Cover Art',
-      subtitle: 'Add a release date or credit line here.',
+      eyebrow: 'Graphic Design, Marketing Strategy, Event Planning',
+      subtitle: 'Mock Campaign',
       body: [
-        'Placeholder write-up for “Disco Occassionally.” Swap this copy for the real story behind the release - direction, concept, and your role on it.',
+        'A global pre-release campaign designed to build anticipation for the album Kiss All the Time. Disco, Occasionally.',
+        'The campaign introduces a series of unexpected disco experiences across major cities in Europe and the US. Rather than announcing every activation in advance, the discos appear without a predictable schedule and in locations where a disco would not normally be expected. Eg: a cafe, a library, a corporate building etc.',
+        'The unpredictability becomes a central part of the campaign, encouraging fans to follow clues, share discoveries and speculate about where the experience will appear next. This helps to build strong bonds between the fans and the artist, serving into the tagline “We belong together.”',
       ],
-      linkLabel: 'Listen to the track',
+      sections: [
+        {
+          heading: 'The Telephone Booths',
+          image: discoMockupImg,
+          body: [
+            "Pink British telephone booths are placed throughout participating cities as part of the campaign's discovery element.",
+            'Fans can pick up the receiver to hear exclusive fragments connected to the upcoming album. Each booth reveals something different, including short instrumentals, lyrics, voice recordings or the clue for the next disco’s location.',
+            'This encourages fans to visit multiple locations and share their discoveries online, collectively piecing together fragments of the album before its release.',
+          ],
+        },
+        {
+          heading: 'The Disco Map',
+          image: discoBoothImg,
+          body: [
+            'A dedicated digital platform allows fans to track the campaign across different cities.',
+            'The map records locations where the disco has already appeared while keeping future locations hidden. Fans can unlock information about upcoming activations by solving clues released through social media and physical installations.',
+            'As the campaign progresses, more locations are revealed, creating an interactive record of the album rollout across the world.',
+          ],
+        },
+        {
+          heading: 'The Pleasing Pop-Up',
+          image: discoMapImg,
+          body: [
+            'Selected disco locations include a Pleasing pop-up featuring a limited-edition nail polish inspired by the album.',
+            "The collection uses shades and finishes influenced by the campaign's disco aesthetic, including metallic pinks, chrome, glittery blue and solid black.",
+            'The pop-up extends the album experience into a physical product, allowing fans to interact with and purchase a limited-edition piece connected to the campaign.',
+          ],
+        },
+      ],
+      closingImage: discoPolishImg,
     },
   },
   {
@@ -183,7 +218,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#d3a23a',
     accent2: '#8c661f',
     x: 65,
-    y: 64,
+    y: 68,
     content: {
       eyebrow: 'Collaboration · Campaign',
       subtitle: 'Add partner name and campaign scope here.',

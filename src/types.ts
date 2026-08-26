@@ -2,6 +2,12 @@ export type IconKind = 'music' | 'video' | 'document' | 'product' | 'collab';
 
 export type IconShape = 'square' | 'portrait' | 'landscape' | 'widget' | 'poster' | 'strip' | 'photo';
 
+export interface WindowContentSection {
+  heading: string;
+  body: string[];
+  image?: string;
+}
+
 export interface WindowContentData {
   eyebrow: string;
   subtitle: string;
@@ -9,6 +15,10 @@ export interface WindowContentData {
   showImageGrid?: boolean;
   showVideo?: boolean;
   linkLabel?: string;
+  /** Extra case-study blocks (image + heading + copy) rendered inside the Preview section, in order. */
+  sections?: WindowContentSection[];
+  /** A final image shown after all sections, inside the Preview section. */
+  closingImage?: string;
 }
 
 export interface DesktopIconData {
