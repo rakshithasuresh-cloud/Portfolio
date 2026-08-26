@@ -160,12 +160,12 @@ export const desktopIcons: DesktopIconData[] = [
     x: 33,
     y: 41,
     content: {
-      eyebrow: 'Single · Cover Art',
-      subtitle: 'Add a release date or credit line here.',
+      eyebrow: 'Illustration',
+      subtitle: 'Creative Process',
       body: [
-        'Placeholder write-up for “To Nie Pop.” Swap in the real story, credits, and any campaign assets.',
+        'This piece is inspired by the fig tree analogy in The Bell Jar, where the figs represent different possibilities and choices in life.',
+        'My interpretation is that by becoming the tree, the individual is no longer limited to choosing between a fixed number of possibilities. The ability to grow, create, and pursue new opportunities comes from within.',
       ],
-      linkLabel: 'Listen to the track',
     },
   },
   {
