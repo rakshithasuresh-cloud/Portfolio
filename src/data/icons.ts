@@ -185,7 +185,7 @@ export const desktopIcons: DesktopIconData[] = [
       sections: [
         {
           heading: 'The Telephone Booths',
-          image: discoMockupImg,
+          image: discoBoothImg,
           body: [
             "Pink British telephone booths are placed throughout participating cities as part of the campaign's discovery element.",
             'Fans can pick up the receiver to hear exclusive fragments connected to the upcoming album. Each booth reveals something different, including short instrumentals, lyrics, voice recordings or the clue for the next disco’s location.',
@@ -194,7 +194,7 @@ export const desktopIcons: DesktopIconData[] = [
         },
         {
           heading: 'The Disco Map',
-          image: discoBoothImg,
+          image: discoMapImg,
           body: [
             'A dedicated digital platform allows fans to track the campaign across different cities.',
             'The map records locations where the disco has already appeared while keeping future locations hidden. Fans can unlock information about upcoming activations by solving clues released through social media and physical installations.',
@@ -203,7 +203,7 @@ export const desktopIcons: DesktopIconData[] = [
         },
         {
           heading: 'The Pleasing Pop-Up',
-          image: discoMapImg,
+          image: discoPolishImg,
           body: [
             'Selected disco locations include a Pleasing pop-up featuring a limited-edition nail polish inspired by the album.',
             "The collection uses shades and finishes influenced by the campaign's disco aesthetic, including metallic pinks, chrome, glittery blue and solid black.",
@@ -211,7 +211,7 @@ export const desktopIcons: DesktopIconData[] = [
           ],
         },
       ],
-      closingImage: discoPolishImg,
+      closingImage: discoMockupImg,
     },
   },
   {
