@@ -8,6 +8,8 @@ import atonementImg from '../assets/desktop/atonement.jpg';
 import atonementMockupImg from '../assets/desktop/atonement-mockup.jpg';
 import atonementRawImg from '../assets/desktop/atonement-raw.jpg';
 import herImg from '../assets/desktop/her.jpg';
+import herMockupImg from '../assets/desktop/her-mockup.jpg';
+import herRawImg from '../assets/desktop/her-raw.jpg';
 import photostripImg from '../assets/desktop/photostrip.jpg';
 import figImg from '../assets/desktop/fig.jpg';
 import artImg from '../assets/desktop/art.jpg';
@@ -103,7 +105,7 @@ export const desktopIcons: DesktopIconData[] = [
   },
   {
     id: 'pierwszy-swag',
-    label: 'Her',
+    label: 'HER',
     kind: 'document',
     shape: 'poster',
     glyph: '✎',
@@ -113,13 +115,16 @@ export const desktopIcons: DesktopIconData[] = [
     x: 44,
     y: 34,
     content: {
-      eyebrow: 'Editorial · Case Study',
-      subtitle: 'Add a short one-line description here.',
+      eyebrow: 'Graphic Design',
+      subtitle: 'Creative Process',
       body: [
-        'Placeholder case study text. Use this space to walk through the brief, your process, and the final deliverables.',
-        'This template holds several paragraphs comfortably, plus an optional image grid below.',
+        'This is an autobiography book cover, I chose a grunge-inspired visual style to reflect the writing style of the book as well as the complexity and fragmentation of Taylor Swift’s public image. The portrait is constructed from incomplete sections, representing how the media and public often form narratives around her from partial information, speculation, and isolated moments rather than the full story, which gives us an incomplete view of who she really is.',
+        'Instead of using her name as the title, I chose HER. This reflects the way Taylor is often referred to through labels and narratives created by others, whether by the fans or critics. The contrast in colouring also represents the stark difference between her public persona and the person behind it.',
       ],
-      showImageGrid: true,
+      sections: [
+        { heading: 'Mock up', image: herMockupImg },
+        { heading: 'Raw', image: herRawImg },
+      ],
     },
   },
   {
