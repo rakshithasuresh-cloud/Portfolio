@@ -24,8 +24,14 @@ export function WindowContent({ icon }: WindowContentProps) {
       <p className="wc-subtitle">{content.subtitle}</p>
 
       <div className="wc-cover">
-        <span className="wc-cover-glyph">{icon.glyph}</span>
-        <span className="wc-cover-tag">Placeholder cover</span>
+        {icon.image ? (
+          <img src={icon.image} alt="" className="wc-cover-img" />
+        ) : (
+          <>
+            <span className="wc-cover-glyph">{icon.glyph}</span>
+            <span className="wc-cover-tag">Placeholder cover</span>
+          </>
+        )}
       </div>
 
       <div className="wc-body">
