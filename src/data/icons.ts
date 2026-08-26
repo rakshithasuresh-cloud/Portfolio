@@ -160,7 +160,7 @@ export const desktopIcons: DesktopIconData[] = [
   },
   {
     id: 'disco',
-    label: 'Disco Occassionally',
+    label: 'Disco Occasionally',
     kind: 'product',
     shape: 'poster',
     glyph: '♫',
