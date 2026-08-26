@@ -39,7 +39,7 @@ const COMPACT: Partial<Record<DockAppKind, true>> = {
 
 const DIVIDER_BEFORE: Partial<Record<DockAppKind, true>> = {
   linkedin: true,
-  mail: true,
+  photos: true,
   trash: true,
 };
 
