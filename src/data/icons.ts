@@ -47,7 +47,7 @@ export const desktopIcons: DesktopIconData[] = [
     glyph: '▶',
     accent: '#2b2b2e',
     accent2: '#151517',
-    x: 54,
+    x: 51,
     y: 28,
     content: {
       eyebrow: 'Live Visuals · Motion',
@@ -179,7 +179,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#e85fa8',
     accent2: '#9b2f6d',
     image: discoMainImg,
-    x: 69,
+    x: 67,
     y: 51,
     content: {
       eyebrow: 'Graphic Design, Marketing Strategy, Event Planning',
@@ -267,8 +267,8 @@ export const desktopIcons: DesktopIconData[] = [
     glyph: '♪',
     accent: '#6b4c8a',
     accent2: '#3d2b52',
-    x: 62,
-    y: 37,
+    x: 59,
+    y: 32,
     content: {
       eyebrow: 'Single · Cover Art',
       subtitle: 'Add a release date or credit line here.',
@@ -288,7 +288,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent2: '#522b2b',
     image: tourReelImg,
     tileSize: { w: 71, h: 118 },
-    x: 68,
+    x: 65,
     y: 26,
     content: {
       eyebrow: 'Illustration, Animation',
@@ -308,7 +308,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent2: '#2b3d52',
     image: zineCoverImg,
     tileSize: { w: 100, h: 75 },
-    x: 56,
+    x: 57,
     y: 47,
     content: {
       eyebrow: 'Illustration, Animation',
@@ -348,8 +348,8 @@ export const desktopIcons: DesktopIconData[] = [
     accent2: '#2b523d',
     image: sessionTapeImg,
     tileSize: { w: 100, h: 79 },
-    x: 40,
-    y: 19,
+    x: 38,
+    y: 21,
     content: {
       eyebrow: 'Illustration, Animation',
       subtitle: 'Content Creation',
