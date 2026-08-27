@@ -248,8 +248,8 @@ export const desktopIcons: DesktopIconData[] = [
     glyph: '♫',
     accent: '#405c53',
     accent2: '#22332d',
-    x: 54,
-    y: 28,
+    x: 32,
+    y: 61,
     content: {
       eyebrow: 'EP · Artwork',
       subtitle: 'Add track list or release date here.',
@@ -349,8 +349,8 @@ export const desktopIcons: DesktopIconData[] = [
     accent2: '#2b523d',
     image: sessionTapeImg,
     tileSize: { w: 100, h: 79 },
-    x: 32,
-    y: 61,
+    x: 54,
+    y: 28,
     content: {
       eyebrow: 'Collaboration · Campaign',
       subtitle: 'Add partner name and session scope here.',
