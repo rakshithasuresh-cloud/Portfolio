@@ -14,6 +14,9 @@ import photostripImg from '../assets/desktop/photostrip.jpg';
 import figImg from '../assets/desktop/fig.jpg';
 import artImg from '../assets/desktop/art.jpg';
 import weirdImg from '../assets/desktop/weird.jpg';
+import tourReelImg from '../assets/desktop/tour-reel.jpg';
+import sessionTapeImg from '../assets/desktop/session-tape.jpg';
+import zineCoverImg from '../assets/desktop/zine-cover.jpg';
 
 export const desktopIcons: DesktopIconData[] = [
   {
@@ -277,12 +280,13 @@ export const desktopIcons: DesktopIconData[] = [
   },
   {
     id: 'tour-reel',
-    label: 'Tour Reel',
+    label: 'Lyrics Animation',
     kind: 'video',
     shape: 'square',
     glyph: '▶',
     accent: '#8a4c4c',
     accent2: '#522b2b',
+    image: tourReelImg,
     x: 68,
     y: 26,
     content: {
@@ -291,18 +295,18 @@ export const desktopIcons: DesktopIconData[] = [
       body: [
         'Placeholder description for the tour reel. Describe the brief, the tools used, and the outcome.',
       ],
-      showVideo: true,
       linkLabel: 'Watch the reel',
     },
   },
   {
     id: 'zine-cover',
-    label: 'Zine Cover',
+    label: 'Rigged Animation',
     kind: 'document',
     shape: 'square',
     glyph: '✦',
     accent: '#4c6b8a',
     accent2: '#2b3d52',
+    image: zineCoverImg,
     x: 56,
     y: 47,
     content: {
@@ -311,7 +315,6 @@ export const desktopIcons: DesktopIconData[] = [
       body: [
         'Placeholder case study text. Use this space to walk through the brief, your process, and the final deliverables.',
       ],
-      showImageGrid: true,
     },
   },
   {
@@ -336,12 +339,13 @@ export const desktopIcons: DesktopIconData[] = [
   },
   {
     id: 'session-tape',
-    label: 'Session Tape',
+    label: 'Viral',
     kind: 'collab',
     shape: 'square',
     glyph: '✧',
     accent: '#4c8a6b',
     accent2: '#2b523d',
+    image: sessionTapeImg,
     x: 32,
     y: 61,
     content: {
@@ -350,7 +354,6 @@ export const desktopIcons: DesktopIconData[] = [
       body: [
         'Placeholder description of the collaboration - partners involved, session goals, and deliverables.',
       ],
-      showImageGrid: true,
     },
   },
   {
