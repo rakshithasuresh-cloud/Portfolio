@@ -47,8 +47,8 @@ export const desktopIcons: DesktopIconData[] = [
     glyph: '▶',
     accent: '#2b2b2e',
     accent2: '#151517',
-    x: 40,
-    y: 23,
+    x: 54,
+    y: 28,
     content: {
       eyebrow: 'Live Visuals · Motion',
       subtitle: 'Add tour name, venue, or year here.',
@@ -349,8 +349,8 @@ export const desktopIcons: DesktopIconData[] = [
     accent2: '#2b523d',
     image: sessionTapeImg,
     tileSize: { w: 100, h: 79 },
-    x: 54,
-    y: 28,
+    x: 40,
+    y: 19,
     content: {
       eyebrow: 'Collaboration · Campaign',
       subtitle: 'Add partner name and session scope here.',
