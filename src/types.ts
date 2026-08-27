@@ -33,6 +33,8 @@ export interface DesktopIconData {
   accent2: string;
   /** When set, this real image fills the tile instead of the gradient + glyph treatment. */
   image?: string;
+  /** Overrides the shape's default tile box with the image's real aspect ratio, so it renders uncropped. */
+  tileSize?: { w: number; h: number };
   /** Purely decorative — draggable but doesn't open a window on click. */
   notOpenable?: boolean;
   /** Hides the text label under the tile. */

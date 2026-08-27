@@ -287,6 +287,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#8a4c4c',
     accent2: '#522b2b',
     image: tourReelImg,
+    tileSize: { w: 71, h: 118 },
     x: 68,
     y: 26,
     content: {
@@ -307,6 +308,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#4c6b8a',
     accent2: '#2b3d52',
     image: zineCoverImg,
+    tileSize: { w: 100, h: 75 },
     x: 56,
     y: 47,
     content: {
@@ -346,6 +348,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#4c8a6b',
     accent2: '#2b523d',
     image: sessionTapeImg,
+    tileSize: { w: 100, h: 79 },
     x: 32,
     y: 61,
     content: {

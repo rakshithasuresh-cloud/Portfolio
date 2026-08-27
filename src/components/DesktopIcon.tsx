@@ -56,7 +56,7 @@ export function DesktopIcon({ data, containerRef, onOpen }: DesktopIconProps) {
         },
   });
 
-  const size = TILE_SIZE[data.shape];
+  const size = data.tileSize ?? TILE_SIZE[data.shape];
   const style = {
     left: `${pos.x}%`,
     top: `${pos.y}%`,
@@ -68,7 +68,7 @@ export function DesktopIcon({ data, containerRef, onOpen }: DesktopIconProps) {
   const tileStyle = data.image
     ? ({
         backgroundImage: `url(${data.image})`,
-        backgroundSize: CONTAIN_SHAPES.has(data.shape) ? 'contain' : 'cover',
+        backgroundSize: data.tileSize || CONTAIN_SHAPES.has(data.shape) ? 'contain' : 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
       } as CSSProperties)
