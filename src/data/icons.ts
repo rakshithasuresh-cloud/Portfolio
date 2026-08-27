@@ -291,12 +291,11 @@ export const desktopIcons: DesktopIconData[] = [
     x: 68,
     y: 26,
     content: {
-      eyebrow: 'Live Visuals · Motion',
-      subtitle: 'Add tour name, venue, or year here.',
-      body: [
-        'Placeholder description for the tour reel. Describe the brief, the tools used, and the outcome.',
-      ],
-      linkLabel: 'Watch the reel',
+      eyebrow: 'Illustration, Animation',
+      subtitle: 'Content Creation',
+      body: ['Generated 2.2M+ views and 169K+ likes'],
+      linkLabel: 'View post',
+      linkHref: 'https://www.instagram.com/reel/DapFw-XBDTD/?igsi=aGU0NjR6NnFkYjg=',
     },
   },
   {
@@ -312,11 +311,11 @@ export const desktopIcons: DesktopIconData[] = [
     x: 56,
     y: 47,
     content: {
-      eyebrow: 'Editorial · Case Study',
-      subtitle: 'Add a short one-line description here.',
-      body: [
-        'Placeholder case study text. Use this space to walk through the brief, your process, and the final deliverables.',
-      ],
+      eyebrow: 'Illustration, Animation',
+      subtitle: 'Content Creation',
+      body: ['Generated 2.8M+ views and 231K+ likes'],
+      linkLabel: 'View post',
+      linkHref: 'https://www.instagram.com/reel/Da7xMeZhlHH/?igsi=bDhsMGlmZTV2b2dx',
     },
   },
   {
@@ -352,11 +351,11 @@ export const desktopIcons: DesktopIconData[] = [
     x: 40,
     y: 19,
     content: {
-      eyebrow: 'Collaboration · Campaign',
-      subtitle: 'Add partner name and session scope here.',
-      body: [
-        'Placeholder description of the collaboration - partners involved, session goals, and deliverables.',
-      ],
+      eyebrow: 'Illustration, Animation',
+      subtitle: 'Content Creation',
+      body: ['Generated 11M+ views and 718K+ likes'],
+      linkLabel: 'View post',
+      linkHref: 'https://www.instagram.com/reel/DbaHxZ-B6w-/?igsi=MWQ4bmNwdjZ5dXJ6bw==',
     },
   },
   {
