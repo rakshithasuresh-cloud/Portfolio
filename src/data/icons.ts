@@ -387,10 +387,13 @@ export const desktopIcons: DesktopIconData[] = [
     x: 46,
     y: 67,
     content: {
-      eyebrow: 'EP · Artwork',
-      subtitle: 'Add track list or release date here.',
+      eyebrow: 'Marketing Strategy',
+      subtitle: 'Internship',
       body: [
-        'Placeholder write-up for “B-Sides.” Describe the concept, the artwork direction, and your role.',
+        '• Edited reels and coordinated video production, including scripting, model scouting and scheduling and camera work using Premiere Pro and CapCut',
+        '• Created social media and landing page content while optimising ad captions to improve click-through and engagement',
+        '• Explored Meta Business Suite for ad planning, targeting, and performance monitoring',
+        '• Researched competitors, services, and trends to support campaign strategy and customer acquisition',
       ],
     },
   },
