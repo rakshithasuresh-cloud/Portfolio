@@ -25,7 +25,7 @@ const BLOCKS: { rows: string[][]; caption: string }[] = [
   {
     rows: [
       [binBehind1Img, binBehind2Img, binBehind3Img],
-      [binBehind4Img, binBehind5Img, binBehind6Img],
+      [binBehind6Img, binBehind5Img, binBehind4Img],
     ],
     caption: 'College PR club',
   },
@@ -69,6 +69,7 @@ export function TrashAppContent() {
         <div className="wc-section-body wc-preview-body">
           {BLOCKS.map((block, i) => (
             <div key={i}>
+              <p className="wc-caption">{block.caption}</p>
               {block.rows.map((row, j) => (
                 <div className="wc-grid" key={j}>
                   {row.map((src, k) => (
@@ -78,7 +79,6 @@ export function TrashAppContent() {
                   ))}
                 </div>
               ))}
-              <p className="wc-caption">{block.caption}</p>
             </div>
           ))}
         </div>
