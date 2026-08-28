@@ -57,7 +57,7 @@ export function TrashAppContent() {
         </div>
         <div className="wc-info-heading">
           <h1 className="wc-info-title">Bin</h1>
-          <p className="wc-info-subtitle">Behind the scenes</p>
+          <p className="wc-info-subtitle">Behind the scenes from college roles mentioned in Notes app</p>
         </div>
       </div>
 
