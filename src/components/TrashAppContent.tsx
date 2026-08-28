@@ -21,7 +21,12 @@ import binBehind17Img from '../assets/desktop/bin-behind-17.jpg';
 import binBehind18Img from '../assets/desktop/bin-behind-18.jpg';
 import './WindowContent.css';
 
-const BLOCKS: { rows: string[][]; caption: string }[] = [
+interface DetailItem {
+  text: string;
+  subitems?: string[];
+}
+
+const BLOCKS: { rows: string[][]; caption: string; details?: DetailItem[] }[] = [
   {
     rows: [
       [binBehind1Img, binBehind2Img, binBehind3Img],
@@ -43,6 +48,18 @@ const BLOCKS: { rows: string[][]; caption: string }[] = [
   {
     rows: [[binBehind16Img, binBehind17Img, binBehind18Img]],
     caption: 'National Service Scheme',
+    details: [
+      {
+        text: 'Contributed over 160 hours of service as a volunteer over the span of 2 academic years, engaging in various initiatives to make a positive community impact.',
+      },
+      {
+        text: 'Served as the Social Media Coordinator (core office bearer) in the final year:',
+        subitems: [
+          'Managed NSS social media platforms and curated content to increase volunteer participation and engagement.',
+          'Collaborated with the NSS team, providing regular updates on events and carrying out online events for volunteers.',
+        ],
+      },
+    ],
   },
 ];
 
@@ -79,6 +96,22 @@ export function TrashAppContent() {
                   ))}
                 </div>
               ))}
+              {block.details && (
+                <ul className="wc-bin-list">
+                  {block.details.map((d, idx) => (
+                    <li key={idx}>
+                      {d.text}
+                      {d.subitems && (
+                        <ul className="wc-bin-sublist">
+                          {d.subitems.map((s, j) => (
+                            <li key={j}>{s}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
         </div>
