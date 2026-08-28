@@ -17,6 +17,9 @@ import weirdImg from '../assets/desktop/weird.jpg';
 import tourReelImg from '../assets/desktop/tour-reel.jpg';
 import sessionTapeImg from '../assets/desktop/session-tape.jpg';
 import zineCoverImg from '../assets/desktop/zine-cover.jpg';
+import countDownImg from '../assets/desktop/count-down.jpg';
+import newspaperImg from '../assets/desktop/newspaper.jpg';
+import posterRevealImg from '../assets/desktop/poster-reveal.jpg';
 
 export const desktopIcons: DesktopIconData[] = [
   {
@@ -41,22 +44,22 @@ export const desktopIcons: DesktopIconData[] = [
   },
   {
     id: 'stage-visuals',
-    label: 'Stage Visuals',
+    label: 'Poster reveal',
     kind: 'video',
     shape: 'landscape',
     glyph: '▶',
     accent: '#2b2b2e',
     accent2: '#151517',
+    image: posterRevealImg,
+    tileSize: { w: 80, h: 100 },
     x: 55,
     y: 28,
     content: {
-      eyebrow: 'Live Visuals · Motion',
-      subtitle: 'Add tour name, venue, or year here.',
-      body: [
-        'Placeholder description for the stage visuals project. This is a good spot to describe the brief, tools used (After Effects, Notch, TouchDesigner, etc.), and the outcome.',
-      ],
-      showVideo: true,
-      linkLabel: 'Watch the reel',
+      eyebrow: 'Content Strategy',
+      subtitle: 'Content Creation',
+      body: ['Generated 916K+ views and 14.2K+ likes on event promotion material for the college'],
+      linkLabel: 'View post',
+      linkHref: 'https://www.instagram.com/reel/C2ztmi1SNVQ/?igsi=MWNnazBuaWF3bnJmaA==',
     },
   },
   {
@@ -242,21 +245,22 @@ export const desktopIcons: DesktopIconData[] = [
   },
   {
     id: 'interludium',
-    label: 'Interludium',
+    label: 'Count down',
     kind: 'music',
     shape: 'square',
     glyph: '♫',
     accent: '#405c53',
     accent2: '#22332d',
+    image: countDownImg,
+    tileSize: { w: 86, h: 118 },
     x: 36,
     y: 61,
     content: {
-      eyebrow: 'EP · Artwork',
-      subtitle: 'Add track list or release date here.',
-      body: [
-        'Placeholder write-up for “Interludium.” Describe the concept, the artwork direction, and your role.',
-      ],
-      linkLabel: 'Listen to the EP',
+      eyebrow: 'Content Strategy, Direction',
+      subtitle: 'Content Creation',
+      body: ['Generated 1.9M+ views and 49K+ likes on event promotion material for the college'],
+      linkLabel: 'View post',
+      linkHref: 'https://www.instagram.com/reel/C2_dqaKRMfd/?igsi=eGR2azJudHpjNnlp',
     },
   },
   {
@@ -320,22 +324,22 @@ export const desktopIcons: DesktopIconData[] = [
   },
   {
     id: 'merch-drop',
-    label: 'Merch Drop',
+    label: 'Newspaper',
     kind: 'product',
     shape: 'square',
     glyph: '◍',
     accent: '#8a7c4c',
     accent2: '#52472b',
-    x: 50,
+    image: newspaperImg,
+    tileSize: { w: 76, h: 118 },
+    x: 51,
     y: 52,
     content: {
-      eyebrow: 'Product Design · Packaging',
-      subtitle: 'Add manufacturing or drop details here.',
-      body: [
-        'Placeholder description for the merch drop - materials, print finish, and unboxing details.',
-      ],
-      showImageGrid: true,
-      linkLabel: 'Shop the drop',
+      eyebrow: 'Content Strategy, Prop Making',
+      subtitle: 'Content Creation',
+      body: ['Generated 356K+ views and 3.9K+ likes on event promotion material for the college'],
+      linkLabel: 'View post',
+      linkHref: 'https://www.instagram.com/reel/C26XiG8LMJP/?igsi=Y3E4enVtdzBqNzg2',
     },
   },
   {
