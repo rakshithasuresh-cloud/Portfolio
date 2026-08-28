@@ -20,9 +20,11 @@ export function WindowContent({ icon }: WindowContentProps) {
   return (
     <div className="wc" style={style}>
       <div className="wc-info-header">
-        <div className="wc-info-thumb">
-          {icon.image ? <img src={icon.image} alt="" className="wc-info-thumb-img" /> : <span>{icon.glyph}</span>}
-        </div>
+        {!content.hideThumb && (
+          <div className="wc-info-thumb">
+            {icon.image ? <img src={icon.image} alt="" className="wc-info-thumb-img" /> : <span>{icon.glyph}</span>}
+          </div>
+        )}
         <div className="wc-info-heading">
           <h1 className="wc-info-title">{icon.label}</h1>
           <p className="wc-info-subtitle">{content.subtitle}</p>
@@ -49,7 +51,7 @@ export function WindowContent({ icon }: WindowContentProps) {
 
       <button type="button" className="wc-section-header" onClick={() => setPreviewOpen((v) => !v)}>
         <Chevron open={previewOpen} />
-        Preview:
+        {content.previewLabel ?? 'Preview:'}
       </button>
       {previewOpen && (
         <div className="wc-section-body wc-preview-body">
@@ -79,7 +81,7 @@ export function WindowContent({ icon }: WindowContentProps) {
 
           {content.sections?.map((section, i) => (
             <div className="wc-case-section" key={i}>
-              <h2 className="wc-case-heading">{section.heading}</h2>
+              {section.heading && <h2 className="wc-case-heading">{section.heading}</h2>}
               {section.body?.map((paragraph, j) => (
                 <p key={j} className="wc-case-text">
                   {paragraph}

@@ -65,12 +65,14 @@ export const filesSections: FilesSection[] = [
         eyebrow: 'Folder',
         subtitle: '',
         hidePreviewPlaceholder: true,
+        hideThumb: true,
+        previewLabel: 'Key Contributions:',
         body: [
           'In collaboration with three of my classmates, I undertook a service-based learning project focused on revitalising a small panipuri business. Our goal was to boost their sales and enhance their market presence.',
         ],
         sections: [
           {
-            heading: 'Key Contributions:',
+            heading: '',
             body: [
               '• Menu Diversification: Introduced new menu items based on consumer preferences to attract a wider base.',
               '• Marketing Materials: Designed eye-catching pamphlets, menu cards etc. to promote the business and its offerings.',
@@ -86,12 +88,14 @@ export const filesSections: FilesSection[] = [
         eyebrow: 'Folder',
         subtitle: '',
         hidePreviewPlaceholder: true,
+        hideThumb: true,
+        previewLabel: 'My involvement included:',
         body: [
           'I participated in a Peer-Based Intervention Program initiated by the Department of Psychology at Women’s Christian College, focusing on enhancing personal growth and well-being among female undergraduate students and received a letter of appreciation from the department head.',
         ],
         sections: [
           {
-            heading: 'My involvement included:',
+            heading: '',
             body: [
               '• Collaborative and Individual Activities: Engaged in various team and solo exercises designed to build resilience, self-regulation, and social intelligence.',
               '• Confidence and Emotional Intelligence Development: Received targeted guidance and practical tips that significantly boosted my self-confidence and emotional intelligence.',
@@ -105,12 +109,22 @@ export const filesSections: FilesSection[] = [
         eyebrow: 'Folder',
         subtitle: '',
         hidePreviewPlaceholder: true,
+        hideThumb: true,
+        previewLabel: 'Key Points:',
         body: [
-          '• Analysed the company’s current situation to identify challenges in customer retention.',
-          '• Conducted research on the relationship between CRM, customer satisfaction, and customer retention.',
-          '• Identified factors contributing to customers not staying for a long period.',
-          '• Developed insights based on data-driven research to enhance customer engagement.',
-          '• Proposed strategies to improve CRM effectiveness and increase customer loyalty.',
+          'During my final year of undergraduate, I took on a marketing research project and helped a coworking space solve their problem of not filling enough seats every month. I did this by conducting data analysis using the SPSS software.',
+        ],
+        sections: [
+          {
+            heading: '',
+            body: [
+              '• Analysed the company’s current situation to identify challenges in customer retention.',
+              '• Conducted research on the relationship between CRM, customer satisfaction, and customer retention.',
+              '• Identified factors contributing to customers not staying for a long period.',
+              '• Developed insights based on data-driven research to enhance customer engagement.',
+              '• Proposed strategies to improve CRM effectiveness and increase customer loyalty.',
+            ],
+          },
         ],
       }),
     ],

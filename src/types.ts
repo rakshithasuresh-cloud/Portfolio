@@ -16,6 +16,10 @@ export interface WindowContentData {
   showVideo?: boolean;
   /** Suppresses the gradient placeholder tile in the Preview section when there's no image/grid/video. */
   hidePreviewPlaceholder?: boolean;
+  /** Overrides the "Preview:" toggle label with custom text. */
+  previewLabel?: string;
+  /** Hides the icon thumbnail next to the title in the info header. */
+  hideThumb?: boolean;
   linkLabel?: string;
   /** When set, the link button opens this URL in a new tab instead of doing nothing. */
   linkHref?: string;
