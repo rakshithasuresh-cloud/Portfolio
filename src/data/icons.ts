@@ -287,7 +287,6 @@ export const desktopIcons: DesktopIconData[] = [
         'Placeholder write-up for “New Single.” Swap this copy for the real story behind the release.',
       ],
       previewPhotos: [artsClubImg, artsClub2Img, artsClub3Img],
-      linkLabel: 'Listen to the track',
     },
   },
   {
@@ -387,7 +386,6 @@ export const desktopIcons: DesktopIconData[] = [
       body: [
         'Placeholder write-up for “B-Sides.” Describe the concept, the artwork direction, and your role.',
       ],
-      linkLabel: 'Listen to the EP',
     },
   },
 ];
