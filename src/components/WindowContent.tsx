@@ -55,7 +55,17 @@ export function WindowContent({ icon }: WindowContentProps) {
       </button>
       {previewOpen && (
         <div className="wc-section-body wc-preview-body">
-          {icon.image && <img src={icon.image} alt="" className="wc-preview-img" />}
+          {content.previewPhotos ? (
+            <div className="wc-grid">
+              {content.previewPhotos.map((src, i) => (
+                <div className="wc-photo-tile" key={i}>
+                  <img src={src} alt="" className="wc-photo-tile-img" />
+                </div>
+              ))}
+            </div>
+          ) : (
+            icon.image && <img src={icon.image} alt="" className="wc-preview-img" />
+          )}
 
           {content.showImageGrid && (
             <div className="wc-grid">

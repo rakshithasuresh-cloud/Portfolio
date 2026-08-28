@@ -20,6 +20,11 @@ import zineCoverImg from '../assets/desktop/zine-cover.jpg';
 import countDownImg from '../assets/desktop/count-down.jpg';
 import newspaperImg from '../assets/desktop/newspaper.jpg';
 import posterRevealImg from '../assets/desktop/poster-reveal.jpg';
+import directionImg from '../assets/desktop/direction.jpg';
+import artsClubImg from '../assets/desktop/arts-club.jpg';
+import artsClub2Img from '../assets/desktop/arts-club-2.jpg';
+import artsClub3Img from '../assets/desktop/arts-club-3.jpg';
+import audiImg from '../assets/desktop/audi.jpg';
 
 export const desktopIcons: DesktopIconData[] = [
   {
@@ -226,12 +231,14 @@ export const desktopIcons: DesktopIconData[] = [
   },
   {
     id: 'solar-bialas',
-    label: 'Solar x Białas',
+    label: 'Audi',
     kind: 'collab',
     shape: 'landscape',
     glyph: '✧',
     accent: '#d3a23a',
     accent2: '#8c661f',
+    image: audiImg,
+    tileSize: { w: 100, h: 71 },
     x: 68,
     y: 67,
     content: {
@@ -240,7 +247,6 @@ export const desktopIcons: DesktopIconData[] = [
       body: [
         'Placeholder description of the collaboration - partners involved, campaign goals, and deliverables.',
       ],
-      showImageGrid: true,
     },
   },
   {
@@ -265,12 +271,13 @@ export const desktopIcons: DesktopIconData[] = [
   },
   {
     id: 'new-single',
-    label: 'New Single',
+    label: 'Arts club',
     kind: 'music',
     shape: 'square',
     glyph: '♪',
     accent: '#6b4c8a',
     accent2: '#3d2b52',
+    image: artsClubImg,
     x: 63,
     y: 32,
     content: {
@@ -279,6 +286,7 @@ export const desktopIcons: DesktopIconData[] = [
       body: [
         'Placeholder write-up for “New Single.” Swap this copy for the real story behind the release.',
       ],
+      previewPhotos: [artsClubImg, artsClub2Img, artsClub3Img],
       linkLabel: 'Listen to the track',
     },
   },
@@ -364,12 +372,13 @@ export const desktopIcons: DesktopIconData[] = [
   },
   {
     id: 'b-sides',
-    label: 'B-Sides',
+    label: 'Direction',
     kind: 'music',
     shape: 'square',
     glyph: '♫',
     accent: '#8a4c6b',
     accent2: '#522b3d',
+    image: directionImg,
     x: 46,
     y: 67,
     content: {

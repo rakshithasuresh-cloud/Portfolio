@@ -14,6 +14,8 @@ export interface WindowContentData {
   body: string[];
   showImageGrid?: boolean;
   showVideo?: boolean;
+  /** Renders these images as a grid of square photo tiles in the Preview section, instead of the single full-width icon.image preview. */
+  previewPhotos?: string[];
   /** Suppresses the gradient placeholder tile in the Preview section when there's no image/grid/video. */
   hidePreviewPlaceholder?: boolean;
   /** Overrides the "Preview:" toggle label with custom text. */
