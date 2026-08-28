@@ -49,15 +49,6 @@ export const filesSections: FilesSection[] = [
     ],
   },
   {
-    id: 'research',
-    label: 'Data Analysis',
-    folders: [
-      makeFolder('research-folder-1', 'Folder 1'),
-      makeFolder('research-folder-2', 'Folder 2'),
-      makeFolder('research-folder-3', 'Folder 3'),
-    ],
-  },
-  {
     id: 'undergraduate',
     label: 'Undergraduate',
     folders: [
