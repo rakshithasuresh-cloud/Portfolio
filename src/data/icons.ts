@@ -51,7 +51,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#2b2b2e',
     accent2: '#151517',
     image: posterRevealImg,
-    tileSize: { w: 80, h: 100 },
+    tileSize: { w: 77, h: 100 },
     x: 55,
     y: 28,
     content: {
