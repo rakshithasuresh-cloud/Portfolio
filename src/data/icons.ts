@@ -76,8 +76,8 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#b98b8f',
     accent2: '#7a4b52',
     image: atonementImg,
-    x: 59,
-    y: 66,
+    x: 38,
+    y: 43,
     content: {
       eyebrow: 'Graphic Design',
       subtitle: 'Creative Process',
@@ -167,8 +167,8 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#a23b3b',
     accent2: '#601f1f',
     image: figImg,
-    x: 38,
-    y: 41,
+    x: 59,
+    y: 66,
     content: {
       eyebrow: 'Illustration',
       subtitle: 'Creative Process',
