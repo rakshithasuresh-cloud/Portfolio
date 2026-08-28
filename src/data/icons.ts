@@ -29,7 +29,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent2: '#5c4636',
     image: weirdImg,
     x: 34,
-    y: 33,
+    y: 27,
     content: {
       eyebrow: 'Illustration',
       subtitle: 'Creative Process',
@@ -48,7 +48,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#2b2b2e',
     accent2: '#151517',
     x: 55,
-    y: 34,
+    y: 28,
     content: {
       eyebrow: 'Live Visuals · Motion',
       subtitle: 'Add tour name, venue, or year here.',
@@ -69,7 +69,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent2: '#7a4b52',
     image: atonementImg,
     x: 59,
-    y: 72,
+    y: 66,
     content: {
       eyebrow: 'Graphic Design',
       subtitle: 'Creative Process',
@@ -95,7 +95,7 @@ export const desktopIcons: DesktopIconData[] = [
     notOpenable: true,
     hideLabel: true,
     x: 30,
-    y: 51,
+    y: 45,
     content: {
       eyebrow: 'Single · Artwork',
       subtitle: 'Add a release date or credit line here.',
@@ -115,7 +115,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent2: '#8f2f45',
     image: herImg,
     x: 48,
-    y: 41,
+    y: 35,
     content: {
       eyebrow: 'Graphic Design',
       subtitle: 'Creative Process',
@@ -139,7 +139,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent2: '#20223f',
     image: artImg,
     x: 42,
-    y: 59,
+    y: 53,
     content: {
       eyebrow: 'Illustration',
       subtitle: 'Creative Process',
@@ -160,7 +160,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent2: '#601f1f',
     image: figImg,
     x: 38,
-    y: 47,
+    y: 41,
     content: {
       eyebrow: 'Illustration',
       subtitle: 'Creative Process',
@@ -180,7 +180,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent2: '#9b2f6d',
     image: discoMainImg,
     x: 71,
-    y: 57,
+    y: 51,
     content: {
       eyebrow: 'Graphic Design, Marketing Strategy, Event Planning',
       subtitle: 'Mock Campaign',
@@ -230,7 +230,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#d3a23a',
     accent2: '#8c661f',
     x: 68,
-    y: 73,
+    y: 67,
     content: {
       eyebrow: 'Collaboration · Campaign',
       subtitle: 'Add partner name and campaign scope here.',
@@ -249,7 +249,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#405c53',
     accent2: '#22332d',
     x: 36,
-    y: 67,
+    y: 61,
     content: {
       eyebrow: 'EP · Artwork',
       subtitle: 'Add track list or release date here.',
@@ -268,7 +268,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#6b4c8a',
     accent2: '#3d2b52',
     x: 63,
-    y: 38,
+    y: 32,
     content: {
       eyebrow: 'Single · Cover Art',
       subtitle: 'Add a release date or credit line here.',
@@ -289,7 +289,7 @@ export const desktopIcons: DesktopIconData[] = [
     image: tourReelImg,
     tileSize: { w: 71, h: 118 },
     x: 69,
-    y: 32,
+    y: 26,
     content: {
       eyebrow: 'Illustration, Animation',
       subtitle: 'Content Creation',
@@ -309,7 +309,7 @@ export const desktopIcons: DesktopIconData[] = [
     image: zineCoverImg,
     tileSize: { w: 100, h: 75 },
     x: 61,
-    y: 53,
+    y: 47,
     content: {
       eyebrow: 'Illustration, Animation',
       subtitle: 'Content Creation',
@@ -327,7 +327,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#8a7c4c',
     accent2: '#52472b',
     x: 50,
-    y: 58,
+    y: 52,
     content: {
       eyebrow: 'Product Design · Packaging',
       subtitle: 'Add manufacturing or drop details here.',
@@ -349,7 +349,7 @@ export const desktopIcons: DesktopIconData[] = [
     image: sessionTapeImg,
     tileSize: { w: 100, h: 79 },
     x: 42,
-    y: 27,
+    y: 21,
     content: {
       eyebrow: 'Illustration, Animation',
       subtitle: 'Content Creation',
@@ -367,7 +367,7 @@ export const desktopIcons: DesktopIconData[] = [
     accent: '#8a4c6b',
     accent2: '#522b3d',
     x: 46,
-    y: 73,
+    y: 67,
     content: {
       eyebrow: 'EP · Artwork',
       subtitle: 'Add track list or release date here.',
