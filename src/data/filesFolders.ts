@@ -70,7 +70,7 @@ export const filesSections: FilesSection[] = [
               '• Social Media Setup: Created and managed the business’s social media profiles to increase online visibility and engagement.',
               '• Consumer Feedback: Conducted surveys to gather consumer reviews and insights for continuous improvement.',
               '• Market Observation: Studied similar businesses in the area to identify best practices and potential opportunities.',
-              'Through this hands-on project, we successfully increased the business’s sales in a short period of time and established a stronger connection with their target audience.',
+              'Through this hands-on project, we successfully increased the daily profit of the business from ₹500 to ₹950 in the span of 4 months and strengthened connections with their target audience.',
             ],
           },
         ],
