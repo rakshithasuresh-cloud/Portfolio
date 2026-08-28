@@ -242,10 +242,14 @@ export const desktopIcons: DesktopIconData[] = [
     x: 68,
     y: 67,
     content: {
-      eyebrow: 'Collaboration · Campaign',
-      subtitle: 'Add partner name and campaign scope here.',
+      eyebrow: 'Lead Generation',
+      subtitle: 'Internship',
       body: [
-        'Placeholder description of the collaboration - partners involved, campaign goals, and deliverables.',
+        '• Carried out over 200 calls daily as part of a cold calling campaign to generate leads.',
+        '• Entered and maintained data in Excel.',
+        '• Conducted market analysis to identify trends and opportunities for business growth.',
+        '• Collaborated with the sales team to provide leads based on cold call activities.',
+        '• Assisted in the creation of marketing materials and presentations for potential clients.',
       ],
     },
   },
@@ -281,10 +285,12 @@ export const desktopIcons: DesktopIconData[] = [
     x: 63,
     y: 32,
     content: {
-      eyebrow: 'Single · Cover Art',
-      subtitle: 'Add a release date or credit line here.',
+      eyebrow: 'Growth Strategy',
+      subtitle: 'Leadership',
       body: [
-        'Placeholder write-up for “New Single.” Swap this copy for the real story behind the release.',
+        '• 1st Year: Joined as a member, contributed creative ideas, and assisted in event decorations.',
+        '• 2nd Year: Elected Assistant Coordinator, improved the member selection process, introduced monthly meetings with attendance, facilitated cross-club collaborations, and launched the club’s Instagram account to increase visibility.',
+        '• 3rd Year: Promoted to Coordinator, represented the club in Student Union meetings, managed 48 members without a faculty head, and increased membership applicants from 40 in the 1st year to more than 100. Organised art-based activities, nominated and trained members to represent the college in intercollegiate arts and cultural competitions, and mentored successors for smooth leadership transition.',
       ],
       previewPhotos: [artsClubImg, artsClub2Img, artsClub3Img],
     },
