@@ -38,7 +38,7 @@ const BLOCKS: { rows: string[][]; caption: string }[] = [
       [binBehind10Img, binBehind11Img, binBehind12Img],
       [binBehind13Img, binBehind14Img, binBehind15Img],
     ],
-    caption: 'department events, competition, workshops and club',
+    caption: 'Department events, competition, workshops and club',
   },
   {
     rows: [[binBehind16Img, binBehind17Img, binBehind18Img]],
