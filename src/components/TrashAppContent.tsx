@@ -1,14 +1,50 @@
 import { useState } from 'react';
 import { Chevron } from './Chevron';
 import trashImg from '../assets/dock/trash.png';
-import binPhotoImg from '../assets/desktop/bin-photo.jpg';
-import binPosterImg from '../assets/desktop/bin-poster.jpg';
 import binBehind1Img from '../assets/desktop/bin-behind-1.jpg';
 import binBehind2Img from '../assets/desktop/bin-behind-2.jpg';
 import binBehind3Img from '../assets/desktop/bin-behind-3.jpg';
+import binBehind4Img from '../assets/desktop/bin-behind-4.jpg';
+import binBehind5Img from '../assets/desktop/bin-behind-5.jpg';
+import binBehind6Img from '../assets/desktop/bin-behind-6.jpg';
+import binBehind7Img from '../assets/desktop/bin-behind-7.jpg';
+import binBehind8Img from '../assets/desktop/bin-behind-8.jpg';
+import binBehind9Img from '../assets/desktop/bin-behind-9.jpg';
+import binBehind10Img from '../assets/desktop/bin-behind-10.jpg';
+import binBehind11Img from '../assets/desktop/bin-behind-11.jpg';
+import binBehind12Img from '../assets/desktop/bin-behind-12.jpg';
+import binBehind13Img from '../assets/desktop/bin-behind-13.jpg';
+import binBehind14Img from '../assets/desktop/bin-behind-14.jpg';
+import binBehind15Img from '../assets/desktop/bin-behind-15.jpg';
+import binBehind16Img from '../assets/desktop/bin-behind-16.jpg';
+import binBehind17Img from '../assets/desktop/bin-behind-17.jpg';
+import binBehind18Img from '../assets/desktop/bin-behind-18.jpg';
 import './WindowContent.css';
 
-const BEHIND_THE_SCENES = [binBehind1Img, binBehind2Img, binBehind3Img];
+const BLOCKS: { rows: string[][]; caption: string }[] = [
+  {
+    rows: [
+      [binBehind1Img, binBehind2Img, binBehind3Img],
+      [binBehind4Img, binBehind5Img, binBehind6Img],
+    ],
+    caption: 'College PR club',
+  },
+  {
+    rows: [[binBehind7Img, binBehind8Img, binBehind9Img]],
+    caption: 'Sports day decoration committee',
+  },
+  {
+    rows: [
+      [binBehind10Img, binBehind11Img, binBehind12Img],
+      [binBehind13Img, binBehind14Img, binBehind15Img],
+    ],
+    caption: 'department events, competition, workshops and club',
+  },
+  {
+    rows: [[binBehind16Img, binBehind17Img, binBehind18Img]],
+    caption: 'National Service Scheme',
+  },
+];
 
 export function TrashAppContent() {
   const [previewOpen, setPreviewOpen] = useState(true);
@@ -31,17 +67,20 @@ export function TrashAppContent() {
       </button>
       {previewOpen && (
         <div className="wc-section-body wc-preview-body">
-          <img src={binPhotoImg} alt="" className="wc-preview-img" />
-          <p className="wc-caption">Typography for a music video Kacperczyk x Kinny Zimmer – Nieprzespane Noce</p>
-          <img src={binPosterImg} alt="" className="wc-preview-img" />
-
-          <div className="wc-grid">
-            {BEHIND_THE_SCENES.map((src, i) => (
-              <div className="wc-photo-tile" key={i}>
-                <img src={src} alt="" className="wc-photo-tile-img" />
-              </div>
-            ))}
-          </div>
+          {BLOCKS.map((block, i) => (
+            <div key={i}>
+              {block.rows.map((row, j) => (
+                <div className="wc-grid" key={j}>
+                  {row.map((src, k) => (
+                    <div className="wc-photo-tile" key={k}>
+                      <img src={src} alt="" className="wc-photo-tile-img" />
+                    </div>
+                  ))}
+                </div>
+              ))}
+              <p className="wc-caption">{block.caption}</p>
+            </div>
+          ))}
         </div>
       )}
     </div>
