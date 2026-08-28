@@ -64,6 +64,7 @@ export const filesSections: FilesSection[] = [
       makeFolder('undergraduate-folder-1', 'Service Based Learning', {
         eyebrow: 'Folder',
         subtitle: '',
+        hidePreviewPlaceholder: true,
         body: [
           'In collaboration with three of my classmates, I undertook a service-based learning project focused on revitalising a small panipuri business. Our goal was to boost their sales and enhance their market presence.',
         ],
@@ -84,6 +85,7 @@ export const filesSections: FilesSection[] = [
       makeFolder('undergraduate-folder-2', 'Peer Based Intervention', {
         eyebrow: 'Folder',
         subtitle: '',
+        hidePreviewPlaceholder: true,
         body: [
           'I participated in a Peer-Based Intervention Program initiated by the Department of Psychology at Women’s Christian College, focusing on enhancing personal growth and well-being among female undergraduate students and received a letter of appreciation from the department head.',
         ],
@@ -102,6 +104,7 @@ export const filesSections: FilesSection[] = [
       makeFolder('undergraduate-folder-3', 'Marketing Research', {
         eyebrow: 'Folder',
         subtitle: '',
+        hidePreviewPlaceholder: true,
         body: [
           '• Analysed the company’s current situation to identify challenges in customer retention.',
           '• Conducted research on the relationship between CRM, customer satisfaction, and customer retention.',

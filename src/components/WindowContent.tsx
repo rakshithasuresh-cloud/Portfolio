@@ -71,7 +71,7 @@ export function WindowContent({ icon }: WindowContentProps) {
             </div>
           )}
 
-          {!icon.image && !content.showImageGrid && !content.showVideo && (
+          {!icon.image && !content.showImageGrid && !content.showVideo && !content.hidePreviewPlaceholder && (
             <div className="wc-preview-placeholder">
               <span>{icon.glyph}</span>
             </div>

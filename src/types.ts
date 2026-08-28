@@ -14,6 +14,8 @@ export interface WindowContentData {
   body: string[];
   showImageGrid?: boolean;
   showVideo?: boolean;
+  /** Suppresses the gradient placeholder tile in the Preview section when there's no image/grid/video. */
+  hidePreviewPlaceholder?: boolean;
   linkLabel?: string;
   /** When set, the link button opens this URL in a new tab instead of doing nothing. */
   linkHref?: string;
