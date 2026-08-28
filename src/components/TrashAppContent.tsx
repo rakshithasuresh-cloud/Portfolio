@@ -24,6 +24,7 @@ import './WindowContent.css';
 interface DetailItem {
   text: string;
   subitems?: string[];
+  note?: string;
 }
 
 const BLOCKS: { rows: string[][]; caption: string; details?: DetailItem[] }[] = [
@@ -32,7 +33,13 @@ const BLOCKS: { rows: string[][]; caption: string; details?: DetailItem[] }[] = 
       [binBehind1Img, binBehind2Img, binBehind3Img],
       [binBehind6Img, binBehind5Img, binBehind4Img],
     ],
-    caption: 'College PR club',
+    caption: 'PR Club:',
+    details: [
+      { text: 'Head of the PR team for intercollegiate fests, strategised and directed digital content creation.' },
+      {
+        text: 'Produced reels with record engagement: one with 1.9 million views and another with nearly 1 million views, the highest in the college Instagram account’s history till date.',
+      },
+    ],
   },
   {
     rows: [[binBehind7Img, binBehind8Img, binBehind9Img]],
@@ -43,7 +50,19 @@ const BLOCKS: { rows: string[][]; caption: string; details?: DetailItem[] }[] = 
       [binBehind10Img, binBehind11Img, binBehind12Img],
       [binBehind13Img, binBehind14Img, binBehind15Img],
     ],
-    caption: 'Department events, competition, workshops and club',
+    caption: 'Department Contributions:',
+    details: [
+      { text: 'Represented the department in the Fashion Parade.' },
+      { text: 'Organiser for the National and international Workshop of the department.' },
+      {
+        text: 'Held positions for several events, including:',
+        subitems: ['Decoration and Technical (Student Services Events)', 'Photography (International Conclave)'],
+        note: 'These are selected examples of the committees I led, not the complete list.',
+      },
+      {
+        text: 'Media Manager in the final year, managed the club’s Instagram account, designed posters, geo-tagged content, and wrote summaries of workshops and events.',
+      },
+    ],
   },
   {
     rows: [[binBehind16Img, binBehind17Img, binBehind18Img]],
@@ -108,6 +127,7 @@ export function TrashAppContent() {
                           ))}
                         </ul>
                       )}
+                      {d.note && <p className="wc-bin-note">{d.note}</p>}
                     </li>
                   ))}
                 </ul>

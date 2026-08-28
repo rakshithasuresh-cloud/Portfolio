@@ -275,6 +275,13 @@
   margin-bottom: 4px;
 }
 
+.wc-bin-note {
+  margin: 6px 0 0;
+  font-size: 12px;
+  font-style: italic;
+  color: rgba(16, 16, 18, 0.55);
+}
+
 .wc-link {
   display: inline-flex;
   align-items: center;
