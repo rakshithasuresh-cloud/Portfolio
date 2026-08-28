@@ -243,6 +243,16 @@
   font-size: 16px;
 }
 
+.wc-caption {
+  background: rgba(0, 0, 0, 0.035);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin: -6px 0 14px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: rgba(16, 16, 18, 0.7);
+}
+
 .wc-link {
   display: inline-flex;
   align-items: center;
