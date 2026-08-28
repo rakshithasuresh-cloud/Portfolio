@@ -3,7 +3,12 @@ import { Chevron } from './Chevron';
 import trashImg from '../assets/dock/trash.png';
 import binPhotoImg from '../assets/desktop/bin-photo.jpg';
 import binPosterImg from '../assets/desktop/bin-poster.jpg';
+import binBehind1Img from '../assets/desktop/bin-behind-1.jpg';
+import binBehind2Img from '../assets/desktop/bin-behind-2.jpg';
+import binBehind3Img from '../assets/desktop/bin-behind-3.jpg';
 import './WindowContent.css';
+
+const BEHIND_THE_SCENES = [binBehind1Img, binBehind2Img, binBehind3Img];
 
 export function TrashAppContent() {
   const [previewOpen, setPreviewOpen] = useState(true);
@@ -15,8 +20,8 @@ export function TrashAppContent() {
           <img src={trashImg} alt="" className="wc-info-thumb-img" />
         </div>
         <div className="wc-info-heading">
-          <h1 className="wc-info-title">Bin of ideas</h1>
-          <p className="wc-info-subtitle">Unrelated yet cool selection</p>
+          <h1 className="wc-info-title">Bin</h1>
+          <p className="wc-info-subtitle">Behind the scenes</p>
         </div>
       </div>
 
@@ -29,6 +34,14 @@ export function TrashAppContent() {
           <img src={binPhotoImg} alt="" className="wc-preview-img" />
           <p className="wc-caption">Typography for a music video Kacperczyk x Kinny Zimmer – Nieprzespane Noce</p>
           <img src={binPosterImg} alt="" className="wc-preview-img" />
+
+          <div className="wc-grid">
+            {BEHIND_THE_SCENES.map((src, i) => (
+              <div className="wc-photo-tile" key={i}>
+                <img src={src} alt="" className="wc-photo-tile-img" />
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </div>

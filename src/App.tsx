@@ -88,7 +88,7 @@ function App() {
             : app.kind === 'photos'
               ? `Information about: ${app.label}`
               : app.kind === 'trash'
-                ? 'Information about: Bin of ideas'
+                ? 'Information about: Bin'
                 : app.label;
       const win: WindowState = {
         id: `${key}-${Date.now()}`,

@@ -13,5 +13,5 @@ export const dockApps: DockAppData[] = [
   },
   { id: 'photos', label: 'Photos', kind: 'photos' },
   { id: 'error', label: 'Error', kind: 'error' },
-  { id: 'trash', label: 'Bin of Ideas', kind: 'trash' },
+  { id: 'trash', label: 'Bin', kind: 'trash' },
 ];
