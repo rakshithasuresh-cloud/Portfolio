@@ -24,7 +24,7 @@
   justify-content: center;
   color: rgba(255, 255, 255, 0.85);
   font-size: 22px;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .wc-info-thumb-img {
@@ -123,7 +123,7 @@
   height: auto;
   display: block;
   border-radius: 6px;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.03);
   margin-bottom: 14px;
 }
 
@@ -187,7 +187,7 @@
   background: linear-gradient(160deg, var(--accent) 0%, var(--accent2) 100%);
   position: relative;
   overflow: hidden;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.04);
 }
 
 .wc-grid-tile::before {
@@ -209,7 +209,7 @@
   aspect-ratio: 1;
   border-radius: 3px;
   overflow: hidden;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.04);
 }
 
 .wc-photo-tile-img {
