@@ -27,7 +27,7 @@ interface DetailItem {
   note?: string;
 }
 
-const BLOCKS: { rows: string[][]; caption: string; details?: DetailItem[] }[] = [
+const BLOCKS: { rows: string[][]; caption: string; intro?: string; details?: DetailItem[] }[] = [
   {
     rows: [
       [binBehind1Img, binBehind2Img, binBehind3Img],
@@ -44,6 +44,11 @@ const BLOCKS: { rows: string[][]; caption: string; details?: DetailItem[] }[] = 
   {
     rows: [[binBehind7Img, binBehind8Img, binBehind9Img]],
     caption: 'Sports day decoration committee',
+    intro: 'Led the decoration team, developing the overall visual concept in line with the Sports Day theme.',
+    details: [
+      { text: 'Designed outfit sketches for the parade and transformed the concepts into a cohesive visual direction.' },
+      { text: 'Planned and managed decor purchases, determining the materials and quantities required for execution.' },
+    ],
   },
   {
     rows: [
@@ -72,7 +77,7 @@ const BLOCKS: { rows: string[][]; caption: string; details?: DetailItem[] }[] = 
         text: 'Contributed over 160 hours of service as a volunteer over the span of 2 academic years, engaging in various initiatives to make a positive community impact.',
       },
       {
-        text: 'Served as the Social Media Coordinator (core office bearer) in the final year:',
+        text: 'Served as the Social Media Coordinator in the final year:',
         subitems: [
           'Managed NSS social media platforms and curated content to increase volunteer participation and engagement.',
           'Collaborated with the NSS team, providing regular updates on events and carrying out online events for volunteers.',
@@ -115,6 +120,7 @@ export function TrashAppContent() {
                   ))}
                 </div>
               ))}
+              {block.intro && <p className="wc-case-text">{block.intro}</p>}
               {block.details && (
                 <ul className="wc-bin-list">
                   {block.details.map((d, idx) => (
