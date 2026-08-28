@@ -112,7 +112,7 @@ export const filesSections: FilesSection[] = [
         hideThumb: true,
         previewLabel: 'Key Points:',
         body: [
-          'During my final year of undergraduate, I took on a marketing research project and helped a coworking space solve their problem of not filling enough seats every month. I did this by conducting data analysis using the SPSS software.',
+          'During my final year of undergraduate, I took on a marketing research project and helped a coworking space solve their problem of not filling enough seats every month.',
         ],
         sections: [
           {
