@@ -91,6 +91,8 @@
   padding: 10px;
   border-radius: 10px;
   transition: background-color 0.12s ease;
+  text-decoration: none;
+  color: inherit;
 }
 
 .files-folder:hover {
@@ -108,6 +110,7 @@
   font-size: 13px;
   font-weight: 600;
   color: var(--ink);
+  text-align: center;
 }
 
 /* dummy tool icons - purely decorative, no click/hover affordance */
