@@ -71,7 +71,7 @@ const SECTIONS: InfoSection[] = [
   },
   {
     id: 'what-i-can-do',
-    label: 'What i can do for you',
+    label: 'What I can do for you',
     count: '',
     items: [
       'Strategy & Planning: Turn ideas into purposeful strategies, campaign concepts, content calendars and launch plans with clear objectives.',
