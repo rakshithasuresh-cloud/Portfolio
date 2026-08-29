@@ -69,6 +69,20 @@ const SECTIONS: InfoSection[] = [
       },
     ],
   },
+  {
+    id: 'what-i-can-do',
+    label: 'What I Can Do For You',
+    count: '',
+    items: [
+      'Strategy & Planning: Turn ideas into purposeful strategies, campaign concepts, content calendars and launch plans with clear objectives.',
+      'Creative Direction & Design: Develop social content, campaign visuals, event graphics and brand storytelling that balance aesthetics with communication.',
+      'Content Creation: Create platform-native content, from short-form reels and trending formats to engaging long-form storytelling.',
+      'Research, Insights & Analytics: Analyse market trends, consumer behaviour, customer feedback and campaign performance to identify insights and opportunities.',
+      'CRM & Customer Engagement: Use customer outreach, feedback and CRM data to build meaningful and lasting customer relationships.',
+      'Events & Brand Experiences: Plan and execute engaging experiences, from pre-event promotion to on-ground execution and post-event storytelling.',
+      'Trend & Cultural Intelligence: Identify relevant trends, formats and shifts in audience behaviour, and translate them into timely, brand-relevant ideas.',
+    ],
+  },
 ];
 
 function CheckIcon() {
