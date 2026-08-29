@@ -38,7 +38,7 @@ export function FilesAppContent({ onOpenFolder }: FilesAppContentProps) {
               key={folder.id}
               type="button"
               className="files-folder"
-              onClick={() => onOpenFolder(folder)}
+              onClick={() => (folder.href ? window.open(folder.href, '_blank', 'noopener,noreferrer') : onOpenFolder(folder))}
             >
               <img src={filesImg} alt="" className="files-folder-icon" />
               <span className="files-folder-label">{folder.label}</span>

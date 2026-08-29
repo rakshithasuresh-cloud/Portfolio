@@ -47,6 +47,8 @@ export interface DesktopIconData {
   notOpenable?: boolean;
   /** Hides the text label under the tile. */
   hideLabel?: boolean;
+  /** When set on a Files app folder, clicking it opens this URL in a new tab instead of the Get-Info window. */
+  href?: string;
   x: number;
   y: number;
   content: WindowContentData;

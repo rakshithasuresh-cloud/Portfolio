@@ -19,7 +19,7 @@ export interface FilesSection {
   tools?: FilesTool[];
 }
 
-function makeFolder(id: string, label: string, content?: WindowContentData): DesktopIconData {
+function makeFolder(id: string, label: string, content?: WindowContentData, href?: string): DesktopIconData {
   return {
     id,
     label,
@@ -28,6 +28,7 @@ function makeFolder(id: string, label: string, content?: WindowContentData): Des
     glyph: '📁',
     accent: '#ffc6d5',
     accent2: '#ff9fb8',
+    href,
     x: 0,
     y: 0,
     content: content ?? {
@@ -44,7 +45,12 @@ export const filesSections: FilesSection[] = [
     label: 'Marketing',
     folders: [
       makeFolder('documents-folder-1', 'Folder 1'),
-      makeFolder('documents-folder-2', 'Folder 2'),
+      makeFolder(
+        'documents-folder-2',
+        'Aimé Leon Dore X Jude Bellingham',
+        undefined,
+        'https://canva.link/1bgkmff8zu3a7is',
+      ),
       makeFolder('documents-folder-3', 'Folder 3'),
     ],
   },
