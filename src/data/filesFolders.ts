@@ -49,7 +49,7 @@ export const filesSections: FilesSection[] = [
         'documents-folder-2',
         'Aimé Leon Dore X Jude Bellingham',
         undefined,
-        'https://canva.link/1bgkmff8zu3a7is',
+        'https://marketing-project2-rakshitha.my.canva.site/',
       ),
       makeFolder('documents-folder-3', 'Folder 3'),
     ],
