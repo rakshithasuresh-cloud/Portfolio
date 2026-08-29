@@ -33,17 +33,19 @@ export function FilesAppContent({ onOpenFolder }: FilesAppContentProps) {
         <h2 className="files-content-title">{section.label}</h2>
         {section.subtitle && <p className="files-content-subtitle">{section.subtitle}</p>}
         <div className="files-grid">
-          {section.folders?.map((folder) => (
-            <button
-              key={folder.id}
-              type="button"
-              className="files-folder"
-              onClick={() => (folder.href ? window.open(folder.href, '_blank', 'noopener,noreferrer') : onOpenFolder(folder))}
-            >
-              <img src={filesImg} alt="" className="files-folder-icon" />
-              <span className="files-folder-label">{folder.label}</span>
-            </button>
-          ))}
+          {section.folders?.map((folder) =>
+            folder.href ? (
+              <a key={folder.id} href={folder.href} target="_blank" rel="noopener noreferrer" className="files-folder">
+                <img src={filesImg} alt="" className="files-folder-icon" />
+                <span className="files-folder-label">{folder.label}</span>
+              </a>
+            ) : (
+              <button key={folder.id} type="button" className="files-folder" onClick={() => onOpenFolder(folder)}>
+                <img src={filesImg} alt="" className="files-folder-icon" />
+                <span className="files-folder-label">{folder.label}</span>
+              </button>
+            ),
+          )}
           {section.tools?.map((tool) => (
             <div key={tool.id} className="files-tool">
               <img src={tool.image} alt="" className="files-tool-icon" />
