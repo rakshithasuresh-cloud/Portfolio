@@ -44,7 +44,12 @@ export const filesSections: FilesSection[] = [
     id: 'documents',
     label: 'Marketing',
     folders: [
-      makeFolder('documents-folder-1', 'Folder 1'),
+      makeFolder(
+        'documents-folder-1',
+        'ColourPop X Zara Larsson',
+        undefined,
+        'https://marketing-project2-rakshitha.my.canva.site/makeup-to-wear-charms-to-collect',
+      ),
       makeFolder(
         'documents-folder-2',
         'Aimé Leon Dore X Jude Bellingham',
