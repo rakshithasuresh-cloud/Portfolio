@@ -59,7 +59,6 @@ const SECTIONS: InfoSection[] = [
       {
         label: 'Part-time Student Employment @ Women’s Christian College (2022-2025)',
         items: [
-          'Arts Club Coordinator (2023-2025)',
           'Department Media Manager (2024-2025)',
           'Social Media Coordinator of National Service Scheme (2024-2025)',
           'PR Head (2024)',
