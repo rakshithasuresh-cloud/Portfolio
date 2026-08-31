@@ -139,10 +139,13 @@
   -webkit-user-drag: none;
 }
 
+/* files.png is 220x192 and fills its canvas edge-to-edge like trash.png
+   does - sizing it down to match trash's effective visual weight instead
+   of the generic 72px frameless default, which rendered it far larger
+   than every other dock icon. */
 .dock-tile-img-frameless-files {
-  width: 76px;
-  height: 76px;
-  transform: translateY(0px);
+  width: 48px;
+  height: 42px;
 }
 
 /* trash.png is 174x214 (not square) - sizing the box to match its real
