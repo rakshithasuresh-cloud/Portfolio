@@ -56,7 +56,12 @@ export const filesSections: FilesSection[] = [
         undefined,
         'https://marketing-project2-rakshitha.my.canva.site/',
       ),
-      makeFolder('documents-folder-3', 'Folder 3'),
+      makeFolder(
+        'documents-folder-3',
+        'The Odyessy Perfume',
+        undefined,
+        'https://marketing-project2-rakshitha.my.canva.site/the-odyessy',
+      ),
     ],
   },
   {
