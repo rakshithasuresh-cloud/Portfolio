@@ -27,6 +27,7 @@ const SECTIONS: InfoSection[] = [
     items: [
       'Marketing Research and Strategy',
       'Social Media Content',
+      'Data Analytics (Python and R)',
       'Creative Direction',
       'Artwork (posters, merch, illustrations)',
       'Offline event planning and visuals',
@@ -42,7 +43,7 @@ const SECTIONS: InfoSection[] = [
         label: 'Education',
         items: [
           'UCL School of Management - MSc Marketing Science (2026-2027)',
-          'Women’s Christian College - BBA, General CGPA: 8.4/10 (2022-2025)',
+          'Women’s Christian College - Bachelors in Business Administration, General CGPA: 8.4/10 (2022-2025)',
         ],
       },
       {
@@ -75,7 +76,6 @@ const SECTIONS: InfoSection[] = [
     items: [
       'Strategy & Planning: Turn ideas into purposeful strategies, campaign concepts, content calendars and launch plans with clear objectives.',
       'Creative Direction & Design: Develop social content, campaign visuals, event graphics and brand storytelling that balance aesthetics with communication.',
-      'Data Analytics (Python and R)',
       'Content Creation: Create platform-native content, from short-form reels and trending formats to engaging long-form storytelling.',
       'Research, Insights & Analytics: Analyse market trends, consumer behaviour, customer feedback and campaign performance to identify insights and opportunities.',
       'CRM & Customer Engagement: Use customer outreach, feedback and CRM data to build meaningful and lasting customer relationships.',
