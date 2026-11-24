@@ -19,7 +19,7 @@ import sessionTapeImg from '../assets/desktop/session-tape.jpg';
 import zineCoverImg from '../assets/desktop/zine-cover.jpg';
 import countDownImg from '../assets/desktop/count-down.jpg';
 import newspaperImg from '../assets/desktop/newspaper.jpg';
-import posterRevealImg from '../assets/desktop/poster-reveal.jpg';
+import mixedMediaAnimationImg from '../assets/desktop/mixed-media-animation.jpg';
 import directionImg from '../assets/desktop/direction.jpg';
 import artsClubImg from '../assets/desktop/arts-club.jpg';
 import artsClub2Img from '../assets/desktop/arts-club-2.jpg';
@@ -49,22 +49,22 @@ export const desktopIcons: DesktopIconData[] = [
   },
   {
     id: 'stage-visuals',
-    label: 'Poster reveal',
+    label: 'Mixed Media Animation',
     kind: 'video',
     shape: 'landscape',
     glyph: '▶',
     accent: '#2b2b2e',
     accent2: '#151517',
-    image: posterRevealImg,
-    tileSize: { w: 77, h: 100 },
+    image: mixedMediaAnimationImg,
+    tileSize: { w: 104, h: 78 },
     x: 55,
     y: 28,
     content: {
-      eyebrow: 'Content Strategy',
+      eyebrow: 'Animation',
       subtitle: 'Content Creation',
-      body: ['Generated 916K+ views and 14.2K+ likes on event promotion material for the college'],
+      body: ['Generated 3.4M+ views and 615K+ likes'],
       linkLabel: 'View post',
-      linkHref: 'https://www.instagram.com/reel/C2ztmi1SNVQ/?igsi=MWNnazBuaWF3bnJmaA==',
+      linkHref: 'https://www.instagram.com/reel/Df6FQKSNVtz/?fqnt=cnFxbXpucHZrZjAz',
     },
   },
   {
